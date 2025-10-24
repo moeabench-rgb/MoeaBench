@@ -203,19 +203,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -227,43 +214,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#coluna-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coluna 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coluna-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coluna 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -403,32 +353,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#coluna-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coluna 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coluna-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coluna 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -450,20 +374,23 @@ After loading the API and its dependencies, just import it as:<strong><i> from M
 
 </p>
 
-<p>::: columns</p>
-<p>::: column</p>
-<h3 id="coluna-1">Coluna 1</h3>
-<p>Aqui vai conteúdo mais longo, ou até listas, links, negrito, etc., para que a coluna ocupe espaço suficiente.
-- Item A
-- Item B
-:::</p>
-<p>::: column</p>
-<h3 id="coluna-2">Coluna 2</h3>
-<p>Conteúdo da segunda coluna, também com várias linhas, imagens ou links.
+<div style="display: flex; gap: 20px;">
+
+<div style="flex: 1; border: 1px solid #ddd; padding: 10px;">
+### Coluna A
+Conteúdo da primeira coluna.listas, links ou imagens.
 - Item 1
 - Item 2
-:::</p>
-<p>:::</p>
+</div>
+
+<div style="flex: 1; border: 1px solid #ddd; padding: 10px;">
+### Coluna B
+Conteúdo da segunda coluna. Também com várias linhas e elementos.
+- Item A
+- Item B
+</div>
+
+</div>
 
 
 
