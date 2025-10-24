@@ -1,8 +1,8 @@
 .div_container{
     display: flex !important;
     gap: 20px !important;
-    height: 300px !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
 }
 
 
@@ -11,6 +11,7 @@
     background: #f1f1f1;
     padding: 10px;
     border-radius: 10px;
+    box-sizing: border-box;
 
 
 
