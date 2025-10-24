@@ -1,13 +1,14 @@
-.div_container{
+.md-typeset  .div_container{
     display: flex !important;
     gap: 20px !important;
     flex-wrap: wrap !important;
     width: 100% !important;
+    margin: 0 !important; 
 }
 
 
-.div_container > div{
-    flex:1 !important;
+.md-typeset .div_container > div{
+    flex: 1 1 200px !important; 
     background: #f1f1f1;
     padding: 10px;
     border-radius: 10px;
