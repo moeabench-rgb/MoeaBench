@@ -1,0 +1,18 @@
+.div_container{
+    display: flex;
+    gap: 20px;
+}
+
+
+.div_container > div{
+    flex:1;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+
+
+
+}
+
+
+
