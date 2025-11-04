@@ -1049,117 +1049,117 @@
   <h1>Required method</h1>
 
 <h3 id="metodos">Métodos</h3>
-<pre><code class="language-python">from MoeaBench.base_benchmark import BaseBenchmark
-from enum import Enum
-import numpy as np
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_benchmark</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseBenchmark</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-class E_DTLZ(Enum):
-       F1   = 1
-       F2   = 2
-       F3   = 3
-       Fm   = 5
+<span class="k">class</span><span class="w"> </span><span class="nc">E_DTLZ</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+       <span class="n">F1</span>   <span class="o">=</span> <span class="mi">1</span>
+       <span class="n">F2</span>   <span class="o">=</span> <span class="mi">2</span>
+       <span class="n">F3</span>   <span class="o">=</span> <span class="mi">3</span>
+       <span class="n">Fm</span>   <span class="o">=</span> <span class="mi">5</span>
+<span class="hll">
+</span><span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
 
-@experiment10.benchmark.register_benchmark()
-class dtlz5(BaseBenchmark):
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">benchmark</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_ieq_constr</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="hll">        <span class="n">N</span><span class="o">=</span><span class="n">K</span><span class="o">+</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span>
+</span><span class="hll">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">benchmark</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</span><span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">E_DTLZ</span><span class="p">)</span>
+</span>
 
-    def __init__(self, benchmark = None, type = None, M = 3, P = 700, K = 10, N = None, D = None, n_ieq_constr=1):
-        N=K+M-1
-        super().__init__(benchmark, type, M, P, K, N)
-        self.llist_E_DTLZ = list(E_DTLZ)
-
-
-    def constraits(self,f,parameter = 1,f_c=[]):
-        f_constraits=np.array(f)
-        f_c = np.array([np.sum([ f_c**2  for  f_c in f_constraits[linha,0:f_constraits.shape[1]]])-parameter for index,linha in enumerate(range(f_constraits.shape[0]))  ])
-        return f_c
-
-
-    def eval_cons(self,f):
-        M_constraits = self.constraits(f)
-        eval = M_constraits == 0
-        return f[eval]
+    <span class="k">def</span><span class="w"> </span><span class="nf">constraits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">parameter</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">f_c</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="n">f_constraits</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">f_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span> <span class="n">f_c</span><span class="o">**</span><span class="mi">2</span>  <span class="k">for</span>  <span class="n">f_c</span> <span class="ow">in</span> <span class="n">f_constraits</span><span class="p">[</span><span class="n">linha</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="n">f_constraits</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span><span class="o">-</span><span class="n">parameter</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">linha</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">f_constraits</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>  <span class="p">])</span>
+        <span class="k">return</span> <span class="n">f_c</span>
 
 
-    def get_Points(self):
-        return np.array([*np.random.random((self.get_P(), self.get_N()))*1.0])
+    <span class="k">def</span><span class="w"> </span><span class="nf">eval_cons</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
+        <span class="n">M_constraits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraits</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="nb">eval</span> <span class="o">=</span> <span class="n">M_constraits</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="nb">eval</span><span class="p">]</span>
 
 
-    def F1(self,M,th,Gxm):
-       theta = list(map(lambda TH: np.cos(TH), th[0:(M-1)]))
-       return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_Points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">get_P</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">()))</span><span class="o">*</span><span class="mf">1.0</span><span class="p">])</span>
 
 
-    def F2(self,M,th,Gxm):
-        theta = list(map(lambda TH: np.cos(TH), th[0:(M-2)]))
-        return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)*np.column_stack(np.sin(th[(M-2):(M-1)]))
+    <span class="k">def</span><span class="w"> </span><span class="nf">F1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+       <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
+       <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
 
 
-    def F3(self,M,th,Gxm):
-        theta = list(map(lambda TH: np.cos(TH), th[0:(M-3)]))
-        return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)*np.column_stack(np.sin(th[(M-3):(M-2)]))
+    <span class="k">def</span><span class="w"> </span><span class="nf">F2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
 
 
-    def Fm(self,M,th,Gxm):
-        return (1+Gxm)*np.column_stack(np.sin(th[0:1]))
+    <span class="k">def</span><span class="w"> </span><span class="nf">F3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">)]))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
 
 
-    def get_method(self,enum):
-        return self.llist_E_DTLZ[enum]
+    <span class="k">def</span><span class="w"> </span><span class="nf">Fm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]))</span>
 
 
-    def param_F(self):
-        dict_F = {
-                    self.get_method(0) : self.F1,
-                    self.get_method(1) : self.F2,
-                    self.get_method(2) : self.F3,
-                    self.get_method(3) : self.Fm
-                  }
-        return dict_F
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">enum</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span><span class="p">[</span><span class="n">enum</span><span class="p">]</span>
 
 
-    def calc_F_M(self,Fi,M):
-        if Fi == 1:
-            return self.get_method(0)
-        elif Fi == 2 and M &gt; 2:
-            return self.get_method(1)
-        elif Fi &gt;= 3 and Fi &lt;= M-1 and M &gt; 3:
-            return self.get_method(2)
-        elif Fi == M:
-            return self.get_method(3)
+    <span class="k">def</span><span class="w"> </span><span class="nf">param_F</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dict_F</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F1</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F2</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F3</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fm</span>
+                  <span class="p">}</span>
+        <span class="k">return</span> <span class="n">dict_F</span>
 
 
-    def calc_TH(self,X,Gxm,M):
-        return [X[:,Xi:Xi+1]*np.pi/2 if Xi == 0 else (np.pi/(4*(1+Gxm))*(1+2*Gxm*X[:,Xi:Xi+1]))  for Xi in range(0,M-1)]
+    <span class="k">def</span><span class="w"> </span><span class="nf">calc_F_M</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">Fi</span><span class="p">,</span><span class="n">M</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Fi</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">Fi</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">M</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">Fi</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">Fi</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">M</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">Fi</span> <span class="o">==</span> <span class="n">M</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
 
-    def calc_f(self,X,G):
-        vet_F_M = [self.calc_F_M(F,self.get_M()) for F, i in enumerate(range(0,self.get_M()), start = 1)]
-        return np.column_stack(list(map(lambda Key: self.param_F()[Key](self.get_M(),self.calc_TH(X,G,self.get_M()),G),vet_F_M)))
+    <span class="k">def</span><span class="w"> </span><span class="nf">calc_TH</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Gxm</span><span class="p">,</span><span class="n">M</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">X</span><span class="p">[:,</span><span class="n">Xi</span><span class="p">:</span><span class="n">Xi</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="k">if</span> <span class="n">Xi</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">Gxm</span><span class="o">*</span><span class="n">X</span><span class="p">[:,</span><span class="n">Xi</span><span class="p">:</span><span class="n">Xi</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span>  <span class="k">for</span> <span class="n">Xi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
 
 
-    def calc_g(self,X):
-        return np.sum((X[:,self.get_M()-1:]-0.5)**2, axis = 1).reshape(X.shape[0],1)
+    <span class="k">def</span><span class="w"> </span><span class="nf">calc_f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">G</span><span class="p">):</span>
+        <span class="n">vet_F_M</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_F_M</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">())</span> <span class="k">for</span> <span class="n">F</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()),</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">Key</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_F</span><span class="p">()[</span><span class="n">Key</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">(),</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_TH</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()),</span><span class="n">G</span><span class="p">),</span><span class="n">vet_F_M</span><span class="p">)))</span>
 
 
-    def POFsamples(self):
-        X = self.get_Points()
-        X[:,self.get_M()-1:self.get_N()]=0.5
-        G = self.calc_g(X)
-        F = self.eval_cons(self.calc_f(X,G))
-        return F
+    <span class="k">def</span><span class="w"> </span><span class="nf">calc_g</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
 
 
-    def evaluation(self,x,n_ieq):
-        G=self.calc_g(x)
-        F=self.calc_f(x,G)
-        result =  {&quot;F&quot; : F}
-        if n_ieq != 0:
-            cons = self.constraits(F,1.25)
-            const  = cons.reshape(cons.shape[0],1)
-            result[&quot;G&quot;] = const
-            result[&quot;feasible&quot;] = np.any((result[&quot;G&quot;] &lt;-0.00000000001)  | (result[&quot;G&quot;] &gt; 0.00000000001) )
-        return result
-</code></pre>
+    <span class="k">def</span><span class="w"> </span><span class="nf">POFsamples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_Points</span><span class="p">()</span>
+        <span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">()]</span><span class="o">=</span><span class="mf">0.5</span>
+        <span class="n">G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">F</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_cons</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">G</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">F</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
+        <span class="n">G</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">F</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">G</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="n">F</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">n_ieq</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraits</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="mf">1.25</span><span class="p">)</span>
+            <span class="n">const</span>  <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;feasible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&lt;-</span><span class="mf">0.00000000001</span><span class="p">)</span>  <span class="o">|</span> <span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.00000000001</span><span class="p">)</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
 
 
 
