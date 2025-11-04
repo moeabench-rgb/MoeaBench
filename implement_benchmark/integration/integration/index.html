@@ -1133,7 +1133,7 @@
 <h3 id="moeabench-instantiate">🧩MoeaBench - Instantiate</h3>
 <p style="font-size: 17px;">Create an instance of <strong><i>MoeaBench</i></strong> with <span style="color: darkred;"><strong><i>moeabench()</i></strong></span></p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment_user</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment_user</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation">👤User - Implementation</h3>
 <p style="font-size: 17px;">The user can download your class directly from your repository on GitHub.</p>
@@ -1143,12 +1143,12 @@
 <h3 id="user-implementation_1">👤User - Implementation</h3>
 <p style="font-size: 17px;">The user provides the module related to their class and imports it.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">my_implementations.my_dtlz5</span><span class="w"> </span><span class="kn">import</span> <span class="n">my_dtlz5</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">my_implementations.my_dtlz5</span><span class="w"> </span><span class="kn">import</span> <span class="n">my_dtlz5</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-integrate-benchmark">🧩MoeaBench - Integrate benchmark</h3>
-<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>add_benchmark(module)</i></strong></span> method incorporates your implementation of a benchmark problem into <strong><i>MoeaBench<strong><i>. Your implementation will be used with the same pattern as a native framework problem, but without being part of its structure.</p>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>add_benchmark(module)</i></strong></span> method incorporates your implementation of a benchmark problem into <strong><i>MoeaBench</strong></i>. Your implementation will be used with the same pattern as a native framework problem, but without being part of its structure.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">add_benchmark</span><span class="p">(</span><span class="n">my_dtlz5</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">add_benchmark</span><span class="p">(</span><span class="n">my_dtlz5</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 
 
