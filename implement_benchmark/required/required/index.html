@@ -1424,18 +1424,18 @@
         <span class="k">return</span> <span class="n">F</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-implement-the-basebenchmark-method_1">MoeaBench - implement the BaseBenchmark method</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">96</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_4">User - Implementation</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code>        <span class="n">G</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code>        <span class="n">G</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">F</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">G</span><span class="p">)</span>
         <span class="n">result</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="n">F</span><span class="p">}</span>
         <span class="k">if</span> <span class="n">n_ieq</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
