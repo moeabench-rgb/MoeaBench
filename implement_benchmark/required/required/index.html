@@ -895,9 +895,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integration" class="md-nav__link">
+  <a href="#user-implementation_5" class="md-nav__link">
     <span class="md-ellipsis">
-      MoeaBench - integration
+      User - Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moeabench-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoeaBench - plugin
     </span>
   </a>
   
@@ -1220,9 +1229,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integration" class="md-nav__link">
+  <a href="#user-implementation_5" class="md-nav__link">
     <span class="md-ellipsis">
-      MoeaBench - integration
+      User - Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moeabench-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoeaBench - plugin
     </span>
   </a>
   
@@ -1475,18 +1493,19 @@
             <span class="n">result</span><span class="p">[</span><span class="s2">&quot;feasible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&lt;-</span><span class="mf">0.00000000001</span><span class="p">)</span>  <span class="o">|</span> <span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.00000000001</span><span class="p">)</span> <span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-integration">MoeaBench - integration</h3>
+<h3 id="user-implementation_5">User - Implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
 <span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">my_dtlz5</span><span class="p">(</span><span class="n">m</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="mi">600</span> <span class="p">,</span><span class="n">k</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;IN POF&quot;</span><span class="p">):</span>
-    <span class="n">my_benchmark</span> <span class="o">=</span> <span class="n">dtlz5</span><span class="p">(</span><span class="n">my_dtlz5</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span><span class="nb">type</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
-    <span class="n">F</span> <span class="o">=</span> <span class="n">my_benchmark</span><span class="o">.</span><span class="n">POFsamples</span><span class="p">()</span>
-    <span class="n">my_benchmark</span><span class="o">.</span><span class="n">add_benchmark</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">my_benchmark</span>
+    <span class="n">my_benchmark</span> <span class="o">=</span> <span class="n">dtlz5</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="moeabench-plugin">MoeaBench - plugin</h3>
+<p style="font-size: 17px;">After running their implementation in memory and wishing to save it to a file, the user must implement a method that instantiates their class and uses the native <span style="color: darkred;"><strong><i>add_benchmark()</i></strong></span> method. This method creates a plugin of their implementation to be used as a native <strong><i>MoeaBench</i></strong> benchmark problem.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">my_benchmark</span><span class="o">.</span><span class="n">add_benchmark</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code>   <span class="k">return</span> <span class="n">my_benchmark</span>
 </code></pre></div></td></tr></table></div>
 
 
