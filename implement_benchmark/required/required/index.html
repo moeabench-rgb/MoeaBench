@@ -894,6 +894,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoeaBench - integração
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1210,6 +1219,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoeaBench - integração
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1444,6 +1462,19 @@
             <span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
             <span class="n">result</span><span class="p">[</span><span class="s2">&quot;feasible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&lt;-</span><span class="mf">0.00000000001</span><span class="p">)</span>  <span class="o">|</span> <span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.00000000001</span><span class="p">)</span> <span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="moeabench-integracao">MoeaBench - integração</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_dtlz5</span><span class="p">(</span><span class="n">m</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="mi">600</span> <span class="p">,</span><span class="n">k</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;IN POF&quot;</span><span class="p">):</span>
+    <span class="n">my_benchmark</span> <span class="o">=</span> <span class="n">dtlz5</span><span class="p">(</span><span class="n">my_dtlz5</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span><span class="nb">type</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">my_benchmark</span><span class="o">.</span><span class="n">POFsamples</span><span class="p">()</span>
+    <span class="n">my_benchmark</span><span class="o">.</span><span class="n">add_benchmark</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_benchmark</span>
 </code></pre></div></td></tr></table></div>
 
 
