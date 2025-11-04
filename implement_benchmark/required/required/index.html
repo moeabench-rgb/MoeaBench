@@ -16,7 +16,7 @@
     
     
       
-        <title>Amostras dominadas - MoeaBench</title>
+        <title>Required - MoeaBench</title>
       
     
     
@@ -57,11 +57,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#amostras-dominadas" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +89,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Amostras dominadas
+              Required
             
           </span>
         </div>
@@ -326,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ1/DTLZ1/" class="md-nav__link">
+      <a href="../../../problems/DTLZ1/DTLZ1/" class="md-nav__link">
         
   
   
@@ -349,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ2/DTLZ2/" class="md-nav__link">
+      <a href="../../../problems/DTLZ2/DTLZ2/" class="md-nav__link">
         
   
   
@@ -372,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ3/DTLZ3/" class="md-nav__link">
+      <a href="../../../problems/DTLZ3/DTLZ3/" class="md-nav__link">
         
   
   
@@ -395,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ4/DTLZ4/" class="md-nav__link">
+      <a href="../../../problems/DTLZ4/DTLZ4/" class="md-nav__link">
         
   
   
@@ -418,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ5/DTLZ5/" class="md-nav__link">
+      <a href="../../../problems/DTLZ5/DTLZ5/" class="md-nav__link">
         
   
   
@@ -441,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ6/DTLZ6/" class="md-nav__link">
+      <a href="../../../problems/DTLZ6/DTLZ6/" class="md-nav__link">
         
   
   
@@ -464,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ7/DTLZ7/" class="md-nav__link">
+      <a href="../../../problems/DTLZ7/DTLZ7/" class="md-nav__link">
         
   
   
@@ -487,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ8/DTLZ8/" class="md-nav__link">
+      <a href="../../../problems/DTLZ8/DTLZ8/" class="md-nav__link">
         
   
   
@@ -510,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DTLZ9/DTLZ9/" class="md-nav__link">
+      <a href="../../../problems/DTLZ9/DTLZ9/" class="md-nav__link">
         
   
   
@@ -579,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DPF1/DPF1/" class="md-nav__link">
+      <a href="../../../problems/DPF1/DPF1/" class="md-nav__link">
         
   
   
@@ -602,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DPF2/DPF2/" class="md-nav__link">
+      <a href="../../../problems/DPF2/DPF2/" class="md-nav__link">
         
   
   
@@ -625,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DPF3/DPF3/" class="md-nav__link">
+      <a href="../../../problems/DPF3/DPF3/" class="md-nav__link">
         
   
   
@@ -648,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DPF4/DPF4/" class="md-nav__link">
+      <a href="../../../problems/DPF4/DPF4/" class="md-nav__link">
         
   
   
@@ -671,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DPF5/" class="md-nav__link">
+      <a href="../../../problems/DPF5/DPF5/" class="md-nav__link">
         
   
   
@@ -957,25 +952,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#metodo-dpf5samples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Método dpf5.samples()
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -991,12 +967,116 @@
 
 
 
-<h1 id="amostras-dominadas">Amostras dominadas</h1>
-<h3 id="metodo-dpf5samples">Método dpf5.samples()</h3>
-<p><img alt="Engine" src="../DPF5outPOF.png" /></p>
-<div style = "text-align: right; margin-top: 2em;">
-<button onclick="window.history.back()" style ="font-size:22px;">←</button>
-</div>
+  <h1>Required</h1>
+
+<p>from MoeaBench.base_benchmark import BaseBenchmark
+from enum import Enum
+import numpy as np</p>
+<p>class E_DTLZ(Enum):
+       F1   = 1
+       F2   = 2
+       F3   = 3
+       Fm   = 5</p>
+<p>@experiment10.benchmark.register_benchmark()
+class dtlz5(BaseBenchmark):</p>
+<pre><code>def __init__(self, benchmark = None, type = None, M = 3, P = 700, K = 10, N = None, D = None, n_ieq_constr=1):
+    N=K+M-1
+    super().__init__(benchmark, type, M, P, K, N)
+    self.llist_E_DTLZ = list(E_DTLZ)
+
+
+def constraits(self,f,parameter = 1,f_c=[]):
+    f_constraits=np.array(f)
+    f_c = np.array([np.sum([ f_c**2  for  f_c in f_constraits[linha,0:f_constraits.shape[1]]])-parameter for index,linha in enumerate(range(f_constraits.shape[0]))  ])
+    return f_c
+
+
+def eval_cons(self,f):
+    M_constraits = self.constraits(f)
+    eval = M_constraits == 0
+    return f[eval]
+
+
+def get_Points(self):
+    return np.array([*np.random.random((self.get_P(), self.get_N()))*1.0])
+
+
+def F1(self,M,th,Gxm):
+   theta = list(map(lambda TH: np.cos(TH), th[0:(M-1)]))
+   return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)
+
+
+def F2(self,M,th,Gxm):
+    theta = list(map(lambda TH: np.cos(TH), th[0:(M-2)]))
+    return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)*np.column_stack(np.sin(th[(M-2):(M-1)]))
+
+
+def F3(self,M,th,Gxm):
+    theta = list(map(lambda TH: np.cos(TH), th[0:(M-3)]))
+    return (1+Gxm)*np.prod(np.column_stack(theta ), axis = 1).reshape(Gxm.shape[0],1)*np.column_stack(np.sin(th[(M-3):(M-2)]))
+
+
+def Fm(self,M,th,Gxm):
+    return (1+Gxm)*np.column_stack(np.sin(th[0:1]))
+
+
+def get_method(self,enum):
+    return self.llist_E_DTLZ[enum]
+
+
+def param_F(self):
+    dict_F = {
+                self.get_method(0) : self.F1,
+                self.get_method(1) : self.F2,
+                self.get_method(2) : self.F3,
+                self.get_method(3) : self.Fm
+              }
+    return dict_F
+
+
+def calc_F_M(self,Fi,M):
+    if Fi == 1:
+        return self.get_method(0)
+    elif Fi == 2 and M &gt; 2:
+        return self.get_method(1)
+    elif Fi &gt;= 3 and Fi &lt;= M-1 and M &gt; 3:
+        return self.get_method(2)
+    elif Fi == M:
+        return self.get_method(3)
+
+
+def calc_TH(self,X,Gxm,M):
+    return [X[:,Xi:Xi+1]*np.pi/2 if Xi == 0 else (np.pi/(4*(1+Gxm))*(1+2*Gxm*X[:,Xi:Xi+1]))  for Xi in range(0,M-1)]
+
+
+def calc_f(self,X,G):
+    vet_F_M = [self.calc_F_M(F,self.get_M()) for F, i in enumerate(range(0,self.get_M()), start = 1)]
+    return np.column_stack(list(map(lambda Key: self.param_F()[Key](self.get_M(),self.calc_TH(X,G,self.get_M()),G),vet_F_M)))
+
+
+def calc_g(self,X):
+    return np.sum((X[:,self.get_M()-1:]-0.5)**2, axis = 1).reshape(X.shape[0],1)
+
+
+def POFsamples(self):
+    X = self.get_Points()
+    X[:,self.get_M()-1:self.get_N()]=0.5
+    G = self.calc_g(X)
+    F = self.eval_cons(self.calc_f(X,G))
+    return F
+
+
+def evaluation(self,x,n_ieq):
+    G=self.calc_g(x)
+    F=self.calc_f(x,G)
+    result =  {"F" : F}
+    if n_ieq != 0:
+        cons = self.constraits(F,1.25)
+        const  = cons.reshape(cons.shape[0],1)
+        result["G"] = const
+        result["feasible"] = np.any((result["G"] &lt;-0.00000000001)  | (result["G"] &gt; 0.00000000001) )
+    return result
+</code></pre>
 
 
 
