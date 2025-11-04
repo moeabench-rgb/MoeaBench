@@ -805,6 +805,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recording-in-memory" class="md-nav__link">
     <span class="md-ellipsis">
       recording in memory
@@ -823,9 +832,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#accessing-the-basebenchmark-class-constructor" class="md-nav__link">
     <span class="md-ellipsis">
       Accessing the BaseBenchmark class constructor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-implementation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
     </span>
   </a>
   
@@ -1067,6 +1094,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recording-in-memory" class="md-nav__link">
     <span class="md-ellipsis">
       recording in memory
@@ -1085,9 +1121,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#accessing-the-basebenchmark-class-constructor" class="md-nav__link">
     <span class="md-ellipsis">
       Accessing the BaseBenchmark class constructor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-implementation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      User implementation
     </span>
   </a>
   
@@ -1123,6 +1177,7 @@
 <h3 id="importing-basebenchmark">Importing BaseBenchmark</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_benchmark</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseBenchmark</span>
 </span></code></pre></div></td></tr></table></div>
+<h3 id="user-implementation">User implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1145,6 +1200,7 @@
 <h3 id="extending-basebenchmark">Extending BaseBenchmark</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
+<h3 id="user-implementation_1">User implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">12</span>
 <span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">benchmark</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_ieq_constr</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 </span>        <span class="n">N</span><span class="o">=</span><span class="n">K</span><span class="o">+</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span>
@@ -1152,6 +1208,7 @@
 <h3 id="accessing-the-basebenchmark-class-constructor">Accessing the BaseBenchmark class constructor</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">benchmark</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="user-implementation_2">User implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
