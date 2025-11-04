@@ -1122,10 +1122,19 @@
        <span class="n">Fm</span>   <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench">Moeabench</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="implementation">implementation</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
@@ -1194,16 +1203,7 @@
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">benchmark</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_ieq_constr</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">N</span><span class="o">=</span><span class="n">K</span><span class="o">+</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span>
