@@ -1268,8 +1268,10 @@
        <span class="n">F3</span>   <span class="o">=</span> <span class="mi">3</span>
        <span class="n">Fm</span>   <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">The user may prefer to test their benchmark problem before saving it. This can be done using the  <span style="color: darkred;"><strong><i>register_benchmark()</i></strong></span> method, which registers their implementation for use by some MoeaBench algorithm or any other evolutionary algorithm.</p>
+
 <h3 id="moeabench-memory-record">MoeaBench - memory record</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nd">@experiment</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="moeabench-extend-the-basebenchmark">MoeaBench - extend the BaseBenchmark</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
