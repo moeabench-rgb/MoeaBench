@@ -804,6 +804,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moeabench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      implementation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1030,6 +1048,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moeabench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      implementation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1049,26 +1085,29 @@
   <h1>Required method</h1>
 
 <h3 id="metodos">Métodos</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_benchmark</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseBenchmark</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">E_DTLZ</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+       <span class="n">F1</span>   <span class="o">=</span> <span class="mi">1</span>
+       <span class="n">F2</span>   <span class="o">=</span> <span class="mi">2</span>
+       <span class="n">F3</span>   <span class="o">=</span> <span class="mi">3</span>
+       <span class="n">Fm</span>   <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="moeabench">Moeabench</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="implementation">implementation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -1158,23 +1197,20 @@
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
-<span class="normal">110</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_benchmark</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseBenchmark</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">E_DTLZ</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-       <span class="n">F1</span>   <span class="o">=</span> <span class="mi">1</span>
-       <span class="n">F2</span>   <span class="o">=</span> <span class="mi">2</span>
-       <span class="n">F3</span>   <span class="o">=</span> <span class="mi">3</span>
-       <span class="n">Fm</span>   <span class="o">=</span> <span class="mi">5</span>
-
-<span class="nd">@experiment10</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">register_benchmark</span><span class="p">()</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">dtlz5</span><span class="p">(</span><span class="n">BaseBenchmark</span><span class="p">):</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">benchmark</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_ieq_constr</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">N</span><span class="o">=</span><span class="n">K</span><span class="o">+</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span>
-<span class="hll">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">benchmark</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-</span>        <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">E_DTLZ</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">benchmark</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">E_DTLZ</span><span class="p">)</span>
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">constraits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">parameter</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">f_c</span><span class="o">=</span><span class="p">[]):</span>
@@ -1193,33 +1229,33 @@
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">get_P</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">()))</span><span class="o">*</span><span class="mf">1.0</span><span class="p">])</span>
 
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">F1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
-       <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
-       <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">F2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
-        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">F3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
-        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">)]))</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">Fm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]))</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">get_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">enum</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span><span class="p">[</span><span class="n">enum</span><span class="p">]</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">param_F</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dict_F</span> <span class="o">=</span> <span class="p">{</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F1</span><span class="p">,</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F2</span><span class="p">,</span>
+<span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">F1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+</span><span class="hll">       <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
+</span><span class="hll">       <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">F2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
+</span><span class="hll">        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="p">)]))</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">F3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">theta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">TH</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TH</span><span class="p">),</span> <span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">)]))</span>
+</span><span class="hll">        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">theta</span> <span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Gxm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[(</span><span class="n">M</span><span class="o">-</span><span class="mi">3</span><span class="p">):(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)]))</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">Fm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">Gxm</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Gxm</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]))</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">get_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">enum</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">llist_E_DTLZ</span><span class="p">[</span><span class="n">enum</span><span class="p">]</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">param_F</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">dict_F</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class="hll">                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F1</span><span class="p">,</span>
+</span>                    <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F2</span><span class="p">,</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">F3</span><span class="p">,</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">get_method</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fm</span>
                   <span class="p">}</span>
@@ -1250,25 +1286,25 @@
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
 
 
-<span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">POFsamples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class="hll">        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_Points</span><span class="p">()</span>
-</span><span class="hll">        <span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">()]</span><span class="o">=</span><span class="mf">0.5</span>
-</span><span class="hll">        <span class="n">G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</span><span class="hll">        <span class="n">F</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_cons</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">G</span><span class="p">))</span>
-</span><span class="hll">        <span class="k">return</span> <span class="n">F</span>
-</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">POFsamples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_Points</span><span class="p">()</span>
+        <span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">()]</span><span class="o">=</span><span class="mf">0.5</span>
+        <span class="n">G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">F</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_cons</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">G</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">F</span>
 
-<span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
-</span><span class="hll">        <span class="n">G</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class="hll">        <span class="n">F</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">G</span><span class="p">)</span>
-</span><span class="hll">        <span class="n">result</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="n">F</span><span class="p">}</span>
-</span><span class="hll">        <span class="k">if</span> <span class="n">n_ieq</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class="hll">            <span class="n">cons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraits</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="mf">1.25</span><span class="p">)</span>
-</span><span class="hll">            <span class="n">const</span>  <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
-</span><span class="hll">            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
-</span><span class="hll">            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;feasible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&lt;-</span><span class="mf">0.00000000001</span><span class="p">)</span>  <span class="o">|</span> <span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.00000000001</span><span class="p">)</span> <span class="p">)</span>
-</span><span class="hll">        <span class="k">return</span> <span class="n">result</span>
-</span></code></pre></div></td></tr></table></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
+        <span class="n">G</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">F</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calc_f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">G</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="n">F</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">n_ieq</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraits</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="mf">1.25</span><span class="p">)</span>
+            <span class="n">const</span>  <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;feasible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&lt;-</span><span class="mf">0.00000000001</span><span class="p">)</span>  <span class="o">|</span> <span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.00000000001</span><span class="p">)</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></td></tr></table></div>
 
 
 
