@@ -1134,9 +1134,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-implement-the-basebencmoea-method" class="md-nav__link">
+  <a href="#moeabench-implement-the-basemoea-method" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - implement the BaseBencMoea method
+      🧩MoeaBench - implement the BaseMoea method
     </span>
   </a>
   
@@ -1152,9 +1152,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
+  <a href="#moeabench-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - Integrate benchmark
+      🧩MoeaBench - plugin
     </span>
   </a>
   
@@ -1332,9 +1332,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-implement-the-basebencmoea-method" class="md-nav__link">
+  <a href="#moeabench-implement-the-basemoea-method" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - implement the BaseBencMoea method
+      🧩MoeaBench - implement the BaseMoea method
     </span>
   </a>
   
@@ -1350,9 +1350,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
+  <a href="#moeabench-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - Integrate benchmark
+      🧩MoeaBench - plugin
     </span>
   </a>
   
@@ -1487,7 +1487,7 @@
        <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-implement-the-basebencmoea-method">🧩MoeaBench - implement the BaseBencMoea method</h3>
+<h3 id="moeabench-implement-the-basemoea-method">🧩MoeaBench - implement the BaseMoea method</h3>
 <p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class. This method must contain all the implementation configuration of the user's evolutionary algorithm. It must access the native method of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class: <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span>, which will be responsible for returning viable solutions across generations. This is an indispensable process for solving the benchmark problem. At the end of all generations, the <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method must return the following results in sequence: <span style="color: darkblue;"><strong>an array containing the problem's objectives across generations, an array containing the decision variables across generations, an integer containing the generation size, and an integer containing the population size</strong></span>.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1559,7 +1559,9 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">):</span>
         <span class="n">instance_moea</span> <span class="o">=</span> <span class="n">NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span><span class="p">,</span><span class="n">generations</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-integrate-benchmark">🧩MoeaBench - Integrate benchmark</h3>
+<h3 id="moeabench-plugin">🧩MoeaBench - plugin</h3>
+<p style="font-size: 17px;">After executing their implementation in memory and wishing to save it to a file, the user must implement a method that instantiates their class and uses the native <span style="color: darkred;"><strong><i>add_MOEA()</i></strong></span> method. This method creates a plugin of their implementation to be used as a native evolutionary algorithm of <strong><i>MoeaBench</i></strong>.</p>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">        <span class="n">moea</span> <span class="o">=</span> <span class="n">instance_moea</span><span class="o">.</span><span class="n">add_MOEA</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_5">👤User - Implementation</h3>
