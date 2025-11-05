@@ -1390,15 +1390,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span><span class="p">,</span><span class="n">generations</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_2">👤User - Implementation</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1412,7 +1404,15 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">())</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">())</span>
     <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">typecode</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">FitnessMin</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;attr_float&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniform</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">())</span>
@@ -1420,8 +1420,8 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">individual</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">evaluate</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">evalue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">evaluate</span>
-<span class="hll">    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span>    <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">decorate</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">DeltaPenality</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">feasible</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">decorate</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">DeltaPenality</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">feasible</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxSimulatedBinaryBounded</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">up</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutPolynomialBounded</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">up</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">())</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selNSGA2</span><span class="p">)</span>
