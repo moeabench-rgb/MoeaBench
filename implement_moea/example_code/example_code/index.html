@@ -1116,9 +1116,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
+  <a href="#moeabench-access-to-the-basemoea-class-method" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - Integrate benchmark
+      🧩MoeaBench - Access to the BaseMoea class method
     </span>
   </a>
   
@@ -1134,7 +1134,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark_1" class="md-nav__link">
+  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - Integrate benchmark
     </span>
@@ -1152,7 +1152,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark_2" class="md-nav__link">
+  <a href="#moeabench-integrate-benchmark_1" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - Integrate benchmark
     </span>
@@ -1314,9 +1314,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
+  <a href="#moeabench-access-to-the-basemoea-class-method" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩MoeaBench - Integrate benchmark
+      🧩MoeaBench - Access to the BaseMoea class method
     </span>
   </a>
   
@@ -1332,7 +1332,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark_1" class="md-nav__link">
+  <a href="#moeabench-integrate-benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - Integrate benchmark
     </span>
@@ -1350,7 +1350,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moeabench-integrate-benchmark_2" class="md-nav__link">
+  <a href="#moeabench-integrate-benchmark_1" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - Integrate benchmark
     </span>
@@ -1463,7 +1463,9 @@
 
   <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-integrate-benchmark">🧩MoeaBench - Integrate benchmark</h3>
+<h3 id="moeabench-access-to-the-basemoea-class-method">🧩MoeaBench - Access to the BaseMoea class method</h3>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span> method is part of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class, which is inherited by the user implementation. This method receives an array with the decision variables of the evolutionary algorithm implemented by the user and sends them to the <span style="color: darkred;"><strong><i>evaluation(x,n_ieq)</i></strong></span> method. The <span style="color: darkred;"><strong><i>evaluation</i></strong></span> method is present in any native <strong><i>MoeaBench</i></strong> benchmark problem and is also mandatory for any external benchmark implementation that inherits <span style="color: darkred;"><strong><i>BaseBenchmark</i></strong></span>. The complete description of the `<span style="color: darkred;"><strong><i>evaluation</i></strong></span> method and the returned array can be found at the link <b><a href = "implement_benchmark/example_code/example_code">example code for benchmark problems.</a></b></p>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="bp">self</span><span class="o">.</span><span class="n">resul</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_benchmark</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_3">👤User - Implementation</h3>
@@ -1485,7 +1487,7 @@
        <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-integrate-benchmark_1">🧩MoeaBench - Integrate benchmark</h3>
+<h3 id="moeabench-integrate-benchmark">🧩MoeaBench - Integrate benchmark</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_4">👤User - Implementation</h3>
@@ -1555,7 +1557,7 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">):</span>
         <span class="n">instance_moea</span> <span class="o">=</span> <span class="n">NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span><span class="p">,</span><span class="n">generations</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench-integrate-benchmark_2">🧩MoeaBench - Integrate benchmark</h3>
+<h3 id="moeabench-integrate-benchmark_1">🧩MoeaBench - Integrate benchmark</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">        <span class="n">moea</span> <span class="o">=</span> <span class="n">instance_moea</span><span class="o">.</span><span class="n">add_MOEA</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation_5">👤User - Implementation</h3>
