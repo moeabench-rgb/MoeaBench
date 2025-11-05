@@ -1169,6 +1169,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - notes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1367,6 +1376,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#moeabench-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - notes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1387,10 +1405,8 @@
 <h3 id="moeabench-import-basemoea">🧩MoeaBench - Import BaseMoea</h3>
 <p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> requires that the user's MOEA class inherit from the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class, which defines the rules that must be followed. The class is imported with:</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&lt;mark&gt;palavra destacada&lt;/mark&gt;&quot;</span><span class="p">)</span>
-</span><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_moea</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseMoea</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.base_moea</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseMoea</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="user-implementation">👤User - Implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1490,7 +1506,7 @@
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-implement-the-basemoea-method">🧩MoeaBench - implement the BaseMoea method</h3>
-<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class. This method must contain all the implementation configuration of the user's evolutionary algorithm. It must access the native method of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class: <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span>, which will be responsible for returning viable solutions across generations. This is an indispensable process for solving the benchmark problem. At the end of all generations, the <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method must return the following results in sequence: <span style="color: darkblue;"><strong>an array containing the problem's objectives across generations, an array containing the decision variables across generations, an integer containing the generation size, and an integer containing the population size</strong></span>.</p>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class. This method must contain all the implementation configuration of the user's evolutionary algorithm. It must access the native method of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class: <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span>, which will be responsible for returning viable solutions across generations. This is an indispensable process for solving the benchmark problem. At the end of all generations, the <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method must return the following results in sequence: an <span style="color: darkblue;"><strong>array</strong></span> containing the problem's objectives across generations, an <span style="color: darkblue;"><strong>array</strong></span> containing the decision variables across generations, an <span style="color: darkblue;"><strong>integer</strong></span> containing the generation size, and an <span style="color: darkblue;">integer</strong></span>  containing the population size.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
@@ -1569,6 +1585,8 @@
 <h3 id="user-implementation_5">👤User - Implementation</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code>        <span class="k">return</span> <span class="n">moea</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="moeabench-notes">🧩MoeaBench - notes</h3>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class also provides native methods: <span style="color: darkred;"><strong><i>get_M()</i></strong></span> (<span style="color: darkblue;">integer</strong></span> with the number of objectives), <span style="color: darkred;"><strong><i>get_N()</i></strong></span> (<span style="color: darkblue;">integer</strong></span> with the number of decision variables), <span style="color: darkred;"><strong><i>get_generations()</i></strong></span> (<span style="color: darkblue;">integer</strong></span> with the number of generations), <span style="color: darkred;"><strong><i>get_population()</i></strong></span> (<span style="color: darkblue;">integer</strong></span> with the population number).</p>
 
 
 
