@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#moeabench-problem-with-moeabench-moea" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1102,6 +1107,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Moeabench problem with Moeabench MOEA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1114,6 +1134,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moeabench-import-basebenchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - Import BaseBenchmark
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1267,6 +1315,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moeabench-import-basebenchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - Import BaseBenchmark
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1282,9 +1349,16 @@
 
 
 
-  <h1>Moeabench problem with Moeabench MOEA</h1>
+<h1 id="moeabench-problem-with-moeabench-moea"><strong>Moeabench problem with Moeabench MOEA</strong></h1>
+<h3 id="moeabench-import-basebenchmark">🧩MoeaBench - Import BaseBenchmark</h3>
+<p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> requires the user's Benchmark class to inherit from the <span style="color: darkred;"><strong><i>BaseBenchmark</i></strong></span> class, which defines the rules that must be followed. The class is imported with:</p>
 
-
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span><span class="n">exp</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 
 
