@@ -1576,15 +1576,7 @@
 
 <h3 id="moeabench-flexibility">🧩MoeaBench - flexibility</h3>
 <p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> allows you to implement your own benchmark problem and evolutionary algorithm. These implementations can be associated with benchmark problems and MOEAs native to the framework, following these examples:</p>
-
-<h3 id="moeabench-benchmark-with">🧩MoeaBench - benchmark with</h3>
-<h4 id="moeabench-moea">🧩MoeaBench - moea</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h4 id="user-moea-in-memory">👤User - moea in memory</h4>
-<p style="font-size: 17px;">To learn more about implementing benchmark problems and evolutionary algorithms for in-memory execution, visit:</p>
+<p style="font-size: 17px;">To learn more about implementing benchmark problems and evolutionary algorithms for in-memory execution, integrating user implementations into repositories, and other information, access the links below::</p>
 <ul>
 <li>
 <p style="font-size: 17px;"> <b><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_benchmark/example_code/example_code/">benchmark</a></b></p>
@@ -1594,6 +1586,13 @@
 </li>
 </ul>
 
+<h3 id="moeabench-benchmark-with">🧩MoeaBench - benchmark with</h3>
+<h4 id="moeabench-moea">🧩MoeaBench - moea</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="user-moea-in-memory">👤User - moea in memory</h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ8</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
