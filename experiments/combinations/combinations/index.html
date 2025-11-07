@@ -1151,6 +1151,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#moeabench-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#moeabench-flexibility" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - flexibility
@@ -1391,6 +1400,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#moeabench-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#moeabench-flexibility" class="md-nav__link">
     <span class="md-ellipsis">
       🧩MoeaBench - flexibility
@@ -1551,72 +1569,61 @@
 
 
 <h1 id="moeabench-problem-with-moeabench-moea"><strong><em>Moeabench problem with Moeabench MOEA</em></strong></h1>
+<h3 id="moeabench-instance">🧩MoeaBench - instance</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">Note: A new instance of MoeaBench is required for each execution.</p>
+
 <h3 id="moeabench-flexibility">🧩MoeaBench - flexibility</h3>
 <p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> allows you to implement your own benchmark problem and evolutionary algorithm. These implementations can be associated with benchmark problems and MOEAs native to the framework, following these examples:</p>
 
 <h3 id="moeabench-bemchmark-with">🧩MoeaBench - bemchmark with</h3>
 <h4 id="moeabench-moea">🧩MoeaBench - moea</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span class="n">exp</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experimentp</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-memory">👤User - moea in memory</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">ex4</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp4</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ8</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">exp4</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">exp4</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp4</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ8</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-repository">👤User - moea in repository</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp5</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp5</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DPF5</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">exp5</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp5</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DPF5</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="user-bemchmark-in-memory-with">👤User - bemchmark in memory with</h3>
 <h4 id="moeabench-moea_1">🧩MoeaBench - moea</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp6</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp6</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp6</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
-<span class="n">exp6</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">U_NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp6</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">U_NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-mempry">👤User - Moea in mempry</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp2</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp2</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp2</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
-<span class="n">exp2</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">exp2</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp2</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-repository_1">👤User - Moea in repository</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp8</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp8</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp8</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
-<span class="n">exp8</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp8</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_new_benchmark</span><span class="p">()</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="user-bemchmark-in-repository-with">👤User - bemchmark in repository with</h3>
 <h4 id="moeabench-moea_2">🧩MoeaBench - moea</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp7</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp7</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">exp7</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">MOEAD</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp7</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">eexperiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">MOEAD</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-repository_2">👤User - Moea in repository</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp3</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp3</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">exp3</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">exp3</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">my_NSGA2deap</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="user-moea-in-memory_1">👤User - Moea in memory</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp9</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
-</span><span class="n">exp9</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">exp9</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">exp9</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp9</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">my_dtlz5</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">Moea</span><span class="o">.</span><span class="n">my_new_moea</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">exp9</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span><span class="n">population</span> <span class="o">=</span> <span class="mi">160</span> <span class="p">,</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-run-the-experiment">🧩MoeaBench - run the experiment</h3>
 <p style="font-size: 17px;">After the run method is executed, the variable <span style="color: darkblue;"><strong>experiment.pof </strong></span> receives an array with samples of the Pareto optimal front, and the variable <span style="color: darkblue;"><strong>experiment.result </strong></span> receives an array with the solutions obtained during generations, an array with the decision variables during the generations, and an array with the optimal solutions obtained by the evolutionary algorithm.</p>
