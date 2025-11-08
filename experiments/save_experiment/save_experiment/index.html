@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#moeabenchjoblib" class="md-skip">
+        <a href="#save-the-experiment" class="md-skip">
           Skip to content
         </a>
       
@@ -1130,6 +1130,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1161,6 +1163,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1196,7 +1200,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="objectives across generations">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#decision-variables-across-generations" class="md-nav__link">
@@ -1227,6 +1232,11 @@
       variable experiment.pof
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1350,6 +1360,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1384,7 +1396,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="objectives across generations">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#decision-variables-across-generations" class="md-nav__link">
@@ -1415,6 +1428,11 @@
       variable experiment.pof
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1490,17 +1508,16 @@
 
 
 
-  <h1>Save the experiment</h1>
-
+<h1 id="save-the-experiment"><strong>Save the experiment</strong></h1>
 <p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> offers the user the option to save their experiment, with any type of combination of benchmark problems and evolutionary algorithms. The generated files are:</p>
 
-<h3 id="moeabenchjoblib"><strong>Moeabench.joblib</strong></h3>
+<h2 id="moeabenchjoblib"><em>Moeabench.joblib</em></h2>
 <p style="font-size: 17px;">The <i>.joblib</i> extension can save an object of a class for later use. This file stores:</p>
 
-<h4 id="variable-experimentresult">variable experiment.result</h4>
+<h3 id="variable-experimentresult">variable experiment.result</h3>
 <p style="font-size: 17px;">stores all the results obtained by the evolutionary algorithm.</p>
 
-<h5 id="objectives-across-generations">objectives across generations</h5>
+<h4 id="objectives-across-generations">objectives across generations</h4>
 <p style="font-size: 17px;">
 The array containing the problem's objectives across generations is used by the following Moeabench analysis tools:</p>
 
@@ -1582,16 +1599,16 @@ pareto_surface
 </ul>
 
 <h4 id="variable-experimentpof">variable experiment.pof</h4>
-<h3 id="pofcsv"><strong>pof.csv</strong></h3>
+<h2 id="pofcsv"><strong>pof.csv</strong></h2>
 <p style="font-size: 17px;">A <i>.csv</i> file containing an array with the objectives that represent a sample of the Pareto optimal front of the problem.</p>
 
-<h3 id="resultcsv">result.csv</h3>
+<h2 id="resultcsv">result.csv</h2>
 <p style="font-size: 17px;">A <i>.csv</i>  file containing an array with the objectives representing the solutions found by the evolutionary algorithm to discover the Pareto optimal front.</p>
 
-<h3 id="problemtxt">problem.txt</h3>
+<h2 id="problemtxt">problem.txt</h2>
 <p style="font-size: 17px;">File containing all the characteristics of the benchmark problem and the MOEA related to the experiment.</p>
 
-<h4 id="about-the-evolutionary-algorithm">about the evolutionary algorithm</h4>
+<h3 id="about-the-evolutionary-algorithm">about the evolutionary algorithm</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1602,7 +1619,7 @@ pareto_surface
 <span class="n">population</span><span class="p">:</span> <span class="mi">160</span>
 <span class="n">solutions</span> <span class="n">found</span><span class="p">:</span> <span class="mi">160</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="about-the-benchmark-problem">about the benchmark problem</h4>
+<h3 id="about-the-benchmark-problem">about the benchmark problem</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
