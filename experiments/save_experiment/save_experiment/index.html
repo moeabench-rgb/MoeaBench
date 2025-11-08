@@ -1476,13 +1476,42 @@
 
 <p style="font-size: 17px;"><strong><i>MoeaBench</i></strong> offers the user the option to save their experiment, with any type of combination of benchmark problems and evolutionary algorithms. The generated files are:</p>
 
-<h3 id="moeabenchjoblib">Moeabench.joblib</h3>
+<h3 id="moeabenchjoblib"><strong>Moeabench.joblib</strong></h3>
 <p style="font-size: 17px;">The <i>.joblib</i> extension can save an object of a class for later use. This file stores:</p>
 
 <h4 id="variable-experimentresult">variable experiment.result</h4>
 <p style="font-size: 17px;">stores all the results obtained by the evolutionary algorithm.</p>
 
 <h5 id="objectives-across-generations">objectives across generations</h5>
+<p style="font-size: 17px;">
+The array containing the problem's objectives across generations is used by the following Moeabench analysis tools:</p>
+
+<ul>
+
+<li>
+hypervolume
+</li>
+
+<li>
+GD
+</li>
+
+<li>
+GD+
+</li>
+
+<li>
+IGD
+</li>
+
+<li>
+IGD+
+</li>
+
+
+
+</ul>
+
 <h5 id="decision-variables-across-generations">decision variables across generations</h5>
 <h4 id="variable-experimentpof">variable experiment.pof</h4>
 <h3 id="pofcsv"><strong>pof.csv</strong></h3>
