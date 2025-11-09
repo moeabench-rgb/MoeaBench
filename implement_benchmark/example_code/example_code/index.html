@@ -891,9 +891,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#experimentproblem" class="md-nav__link">
+  <a href="#variable-experimentproblem" class="md-nav__link">
     <span class="md-ellipsis">
-      experiment.problem
+      variable experiment.problem
     </span>
   </a>
   
@@ -2258,9 +2258,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#experimentproblem" class="md-nav__link">
+  <a href="#variable-experimentproblem" class="md-nav__link">
     <span class="md-ellipsis">
-      experiment.problem
+      variable experiment.problem
     </span>
   </a>
   
@@ -2550,7 +2550,7 @@
 <h3 id="moeabench-implement-the-basebenchmark-method_1">🧩MoeaBench - implement the BaseBenchmark method</h3>
 <p style="font-size: 17px;">The  <span style="color: darkred;"><strong><i>evaluation(x,n_ieq)</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseBenchmark</i></strong></span> class.</p>
 
-<h4 id="experimentproblem">experiment.problem</h4>
+<h4 id="variable-experimentproblem">variable experiment.problem</h4>
 <p>This variable should contain the object of the benchmark problem class that implements the <span style="color: darkred;"><strong><i>Evaluation(x,n_ieq)</i></strong></span> method.</p>
 <h4 id="evaluation-method">Evaluation method</h4>
 <p style="font-size: 17px;"><span style="color: darkred;"><strong><i>Evaluation(x,n_ieq)</i></strong></span> method must receive the decision variables of the evolutionary algorithm across generations. For each array received, it must calculate the decision variables imposed by the problem implementation. The user can also add a method within <span style="color: darkred;"><strong><i>evaluation</i></strong></span> to assign constraints or penalties to these objectives. The evolutionary algorithm receives this array of solutions from the <span style="color: darkred;"><strong><i>evaluation</i></strong></span> method and uses these results to evolve its population across generations. This cycle repeats until the evolutionary algorithm completes all generations.</p>
