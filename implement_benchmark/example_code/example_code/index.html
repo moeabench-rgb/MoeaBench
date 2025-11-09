@@ -887,6 +887,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧩MoeaBench - implement the BaseBenchmark method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentproblem" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2230,6 +2254,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧩MoeaBench - implement the BaseBenchmark method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentproblem" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2500,7 +2548,12 @@
         <span class="k">return</span> <span class="n">F</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-implement-the-basebenchmark-method_1">🧩MoeaBench - implement the BaseBenchmark method</h3>
-<p style="font-size: 17px;">The  <span style="color: darkred;"><strong><i>evaluation(x,n_ieq)</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseBenchmark</i></strong></span> class. This method must receive the decision variables of the evolutionary algorithm across generations. For each array received, it must calculate the decision variables imposed by the problem implementation. The user can also add a method within <span style="color: darkred;"><strong><i>evaluation</i></strong></span> to assign constraints or penalties to these objectives. The evolutionary algorithm receives this array of solutions from the <span style="color: darkred;"><strong><i>evaluation</i></strong></span> method and uses these results to evolve its population across generations. This cycle repeats until the evolutionary algorithm completes all generations.</p>
+<p style="font-size: 17px;">The  <span style="color: darkred;"><strong><i>evaluation(x,n_ieq)</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseBenchmark</i></strong></span> class.</p>
+
+<h4 id="experimentproblem">experiment.problem</h4>
+<p>This variable should contain the object of the benchmark problem class that implements the <span style="color: darkred;"><strong><i>Evaluation(x,n_ieq)</i></strong></span> method.</p>
+<h4 id="evaluation-method">Evaluation method</h4>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong><i>Evaluation(x,n_ieq)</i></strong></span> method must receive the decision variables of the evolutionary algorithm across generations. For each array received, it must calculate the decision variables imposed by the problem implementation. The user can also add a method within <span style="color: darkred;"><strong><i>evaluation</i></strong></span> to assign constraints or penalties to these objectives. The evolutionary algorithm receives this array of solutions from the <span style="color: darkred;"><strong><i>evaluation</i></strong></span> method and uses these results to evolve its population across generations. This cycle repeats until the evolutionary algorithm completes all generations.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n_ieq</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
