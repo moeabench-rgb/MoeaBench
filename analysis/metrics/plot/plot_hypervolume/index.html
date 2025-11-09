@@ -1814,6 +1814,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      number of objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2195,6 +2210,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      number of objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2262,6 +2292,15 @@ The method accepts variables of type <span style="color: darkred;"><strong>resul
 </code></pre></div></td></tr></table></div>
 <p><img alt="for generations" src="../img_hypervolume/hyper_6.jpeg" /></p>
 <h3 id="exceptions">exceptions</h3>
+<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.</p>
+
+<h4 id="number-of-objectives">number of objectives</h4>
+<p style="font-size: 17px;">All experiments passed as parameters in the method must have the same number of objectives. Otherwise, an exception is thrown.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+<span class="n">exception</span> <span class="n">thrown</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp2.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp3.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.result = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
+</code></pre></div></td></tr></table></div>
 
 
 
