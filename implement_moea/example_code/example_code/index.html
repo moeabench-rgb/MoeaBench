@@ -1140,6 +1140,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧩MoeaBench - implement the BaseMoea method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentmoea" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.moea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2221,6 +2245,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧩MoeaBench - implement the BaseMoea method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentmoea" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.moea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2380,7 +2428,12 @@
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="moeabench-implement-the-basemoea-method">🧩MoeaBench - implement the BaseMoea method</h3>
-<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class. This method must contain all the implementation configuration of the user's evolutionary algorithm. It must access the native method of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class: <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span>, which will be responsible for returning viable solutions across generations. This is an indispensable process for solving the benchmark problem. At the end of all generations, the <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method must return the following results in sequence: an <span style="color: darkblue;"><strong>array</strong></span> containing the problem's objectives across generations, an <span style="color: darkblue;"><strong>array</strong></span> containing the decision variables across generations, an <span style="color: darkblue;"><strong>integer</strong></span> containing the generation size, and an <span style="color: darkblue;"><strong>integer</strong></span>  containing the population size.</p>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method is a mandatory implementation of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class.</p>
+
+<h4 id="experimentmoea">experiment.moea</h4>
+<p>This variable should contain the object of the evolutionary algorithm class that implements the <span style="color: darkred;"><strong><i>Evaluation(x,n_ieq)</i></strong></span> method.</p>
+<h4 id="evaluation-method">Evaluation method</h4>
+<p style="font-size: 17px;">This method must contain all the implementation configuration of the user's evolutionary algorithm. It must access the native method of the <span style="color: darkred;"><strong><i>BaseMoea</i></strong></span> class: <span style="color: darkred;"><strong><i>evaluation_benchmark(X)</i></strong></span>, which will be responsible for returning viable solutions across generations. This is an indispensable process for solving the benchmark problem. At the end of all generations, the <span style="color: darkred;"><strong><i>evaluation()</i></strong></span> method must return the following results in sequence: an <span style="color: darkblue;"><strong>array</strong></span> containing the problem's objectives across generations, an <span style="color: darkblue;"><strong>array</strong></span> containing the decision variables across generations, an <span style="color: darkblue;"><strong>integer</strong></span> containing the generation size, and an <span style="color: darkblue;"><strong>integer</strong></span>  containing the population size.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
