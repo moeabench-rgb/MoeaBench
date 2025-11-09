@@ -1467,6 +1467,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="number of objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2090,6 +2105,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="number of objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2154,10 +2184,11 @@
 <h2 id="number-of-objectives">number of objectives</h2>
 <p style="font-size: 17px;">All experiments passed as parameters in the method must have the same number of objectives. Otherwise, an exception is thrown.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-</span><span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp.pof = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.pof = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="exception-thrown">exception thrown</h3>
+<p style="font-size: 17px;">['exp.result = 3 objectives', 'exp.pof = 3 objectives', 'exp4.pof = 4 objectives'] must be equals</p>
+
 <h2 id="values-for-objectives">values ​​for objectives</h2>
 <p style="font-size: 17px;">No past objective can be greater than the objectives of the experiments.</p>
 
@@ -2175,9 +2206,10 @@ o array de objetivos passados ao parametro do metodo precisa ter um padrão.</p>
 </span><span class="n">Only</span> <span class="n">arrays</span> <span class="n">are</span> <span class="n">allowed</span> <span class="ow">in</span> <span class="s1">&#39;objectives&#39;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="minimum-of-objectives">minimum of objectives</h3>
-<p><code>python linenums="1" hl_lines="1
-moeabench.pareto(exp.result, exp.pof, exp2.pof,  objectives = [1,2])
-objectives = [1, 2] not be allowed. I is necessary to follow the format: objectives = [obj1, obj2, obj3]</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">I</span> <span class="ow">is</span> <span class="n">necessary</span> <span class="n">to</span> <span class="n">follow</span> <span class="n">the</span> <span class="nb">format</span><span class="p">:</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">,</span> <span class="n">obj3</span><span class="p">]</span> 
+</code></pre></div></td></tr></table></div>
 
 
 
