@@ -2250,11 +2250,11 @@
 <h2 id="purpose">purpose</h2>
 <p style="font-size: 17px;">The <span style="color: darkred;"><strong>pareto</strong></span> me method plots the optimal solutions found by an evolutionary algorithm and samples of the pareto optimal front provided by a benchmark problem.</p>
 
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span> The benchmark problem used in the examples was DPF5. For more information about this problem, click on the link. </p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span> The benchmark problem used in the examples was <strong>DPF5</strong>. For more information about this problem, click on the link. </p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/problems/DPF5/DPF5/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>DPF5 benchmark problem</strong></span></a></p>
 
-<p style="font-size: 17px;">Follow the link for other benchmark problems implemented by MoeaBench.</p>
+<p style="font-size: 17px;">Follow the link for other benchmark problems implemented by <strong><i>MoeaBench</i></strong>.</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>Benchmark problems</strong></span></a></p>
 
@@ -2278,7 +2278,7 @@ The method accepts variables of type <span style="color: darkred;"><strong>exper
 
 <h4 id="any-objectives">any objectives</h4>
 <p style="font-size: 17px;">
-The method allows the selection of any objective, provided that this objective exists in the variables experiment.pof and experiment.result.</p>
+The method allows the selection of any objective, provided that this objective exists in the variables <span style="color: darkblue;"><strong>experimemnt.pof</strong></span> and <span style="color: darkblue;"><strong>experimemnt.result</strong></span>t.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2286,7 +2286,7 @@ The method allows the selection of any objective, provided that this objective e
 <p><img alt="alt text" src="../img_pareto/pareto_5.jpeg" /></p>
 <p><img alt="alt text" src="../img_pareto/pareto_6.jpeg" /></p>
 <h4 id="combination">combination</h4>
-<p style="font-size: 17px;">It is possible to combine variables of the type experiment.pof and experiment.result, to compare the results of the optimal solutions found by the evolutionary algorithm with the samples of the Pareto optimal front of the problem.</p>
+<p style="font-size: 17px;">It is possible to combine variables of the type <span style="color: darkblue;"><strong>experimemnt.pof</strong></span> and <span style="color: darkblue;"><strong>experimemnt.result</strong></span>, to compare the results of the optimal solutions found by the evolutionary algorithm with the samples of the pareto optimal front of the problem.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
