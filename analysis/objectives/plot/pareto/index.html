@@ -1477,9 +1477,63 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#experimentresult-and-experimentpof" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result and experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentpof" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#combination" class="md-nav__link">
     <span class="md-ellipsis">
       combination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult-and-experimentpof_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result and experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentpof_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.pof
     </span>
   </a>
   
@@ -2194,9 +2248,63 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#experimentresult-and-experimentpof" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result and experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentpof" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#combination" class="md-nav__link">
     <span class="md-ellipsis">
       combination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult-and-experimentpof_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result and experiment.pof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentresult_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentpof_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment.pof
     </span>
   </a>
   
@@ -2278,28 +2386,38 @@ The method accepts variables of type <span style="color: darkred;"><strong>exper
 <p style="font-size: 17px;">
 The method allows the selection of any objective, provided that this objective exists in the variables <span style="color: darkred;"><strong>experimemnt.pof</strong></span> and <span style="color: darkred;"><strong>experimemnt.result</strong></span>t.</p>
 
+<h4 id="experimentresult-and-experimentpof">experiment.result and experiment.pof</h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="../img_pareto/pareto_4.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_5.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_6.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto/pareto_1.jpeg" /></p>
+<h4 id="experimentresult">experiment.result</h4>
+<p><img alt="alt text" src="../img_pareto/pareto_3.jpeg" /></p>
+<h4 id="experimentpof">experiment.pof</h4>
+<p><img alt="alt text" src="../img_pareto/pareto_2.jpeg" /></p>
 <h4 id="combination">combination</h4>
 <p style="font-size: 17px;">It is possible to combine variables of the type <span style="color: darkred"><strong>experimemnt.pof</strong></span> and <span style="color: darkred;"><strong>experimemnt.result</strong></span>, to compare the results of the optimal solutions found by the evolutionary algorithm with the samples of the pareto optimal front of the problem.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<h4 id="experimentresult-and-experimentpof_1">experiment.result and experiment.pof</h4>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="../img_pareto/pareto_1.jpeg" />
-<img alt="alt text" src="../img_pareto/pareto_2.jpeg" />
-<img alt="alt text" src="../img_pareto/pareto_3.jpeg" /></p>
+<img alt="alt text" src="../img_pareto/pareto_5.jpeg" /></p>
+<h4 id="experimentresult_1">experiment.result</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<p><img alt="alt text" src="../img_pareto/pareto_4.jpeg" /></p>
+<h4 id="experimentpof_1">experiment.pof</h4>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span>  <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<img alt="alt text" src="../img_pareto/pareto_6.jpeg" /></p>
 <h4 id="default">default</h4>
 <p style="font-size: 17px;">
 In standard mode, the graph is plotted considering only the first three objectives, regardless of the number of objectives in the experiments passed to the method. In this example, the problem has four objectives, but in the default mode, only the first three objectives were shown.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="../img_pareto/pareto_7.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_8.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_9.jpeg" /></p>
+<p><img alt="alt text" src="img_pareto/pareto_7.jpeg" /></p>
+<p><img alt="alt text" src="img_pareto/pareto_8.jpeg" /></p>
+<p><img alt="alt text" src="img_pareto/pareto_9.jpeg" /></p>
 <h3 id="exceptions">exceptions</h3>
 <p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:</p>
 
