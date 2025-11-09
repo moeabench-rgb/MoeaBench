@@ -1476,14 +1476,20 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#generation-range-and-combination-objectives" class="md-nav__link">
+  <a href="#combination" class="md-nav__link">
     <span class="md-ellipsis">
-      generation range and combination objectives
+      combination
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="combination">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#default" class="md-nav__link">
@@ -1496,15 +1502,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      exceptions
-    </span>
-  </a>
   
 </li>
         
@@ -2170,14 +2167,20 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#generation-range-and-combination-objectives" class="md-nav__link">
+  <a href="#combination" class="md-nav__link">
     <span class="md-ellipsis">
-      generation range and combination objectives
+      combination
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="combination">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#default" class="md-nav__link">
@@ -2190,15 +2193,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      exceptions
-    </span>
-  </a>
   
 </li>
         
@@ -2254,36 +2248,55 @@ The method allows the selection of any objective, provided that this objective e
 <p><img alt="alt text" src="../img_pareto/pareto_4.jpeg" /></p>
 <p><img alt="alt text" src="../img_pareto/pareto_5.jpeg" /></p>
 <p><img alt="alt text" src="../img_pareto/pareto_6.jpeg" /></p>
-<h4 id="generation-range-and-combination-objectives">generation range and combination objectives</h4>
-<p style="font-size: 17px;">It is possible to plot with a generation range and a given combination of objectives.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">240</span><span class="p">],</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="for generations" src="img_hypervolume/hyper_5.jpeg" /></p>
-<h4 id="default">default</h4>
-<p style="font-size: 17px;">In default mode, hypervolume is calculated with all objectives and all generations.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="for generations" src="img_hypervolume/hyper_6.jpeg" /></p>
-<h3 id="exceptions">exceptions</h3>
-<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:</p>
-
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/analysis/metrics/plot/exceptions/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>exceptions and rules</strong></span></a></p>
-
-<div style = "text-align: right; margin-top: 2em;">
-<button onclick="window.history.back()" style ="font-size:22px;">←</button>
-</div>
+<h3 id="combination">combination</h3>
+<p style="font-size: 17px;">It is possible to combine variables of the type experiment.pof and experiment.result, to compare the results of the optimal solutions found by the evolutionary algorithm with the samples of the Pareto optimal front of the problem.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
 <p><img alt="alt text" src="../img_pareto/pareto_1.jpeg" />
 <img alt="alt text" src="../img_pareto/pareto_2.jpeg" />
 <img alt="alt text" src="../img_pareto/pareto_3.jpeg" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-</span><span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp.pof = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.pof = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
-</code></pre></div></td></tr></table></div>
+<h4 id="default">default</h4>
+<p style="font-size: 17px;">
+In standard mode, the graph is plotted considering only the first three objectives, regardless of the number of objectives in the experiments passed to the method.</p>
+
+<p>```python linenums="1" hl_lines="1
+moeabench.pareto(exp4.pof, exp4.result)
+<div class="highlight"><pre><span></span><code>![alt text](img_pareto/pareto_7.jpeg)
+
+![alt text](img_pareto/pareto_8.jpeg)
+
+![alt text](img_pareto/pareto_9.jpeg)
+
+
+
+
+### exceptions
+
+&lt;p style=&quot;font-size: 17px;&quot;&gt;To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:&lt;/p&gt;
+
+&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;a href = &quot;https://moeabench-rgb.github.io/MoeaBench/analysis/metrics/plot/exceptions/&quot;&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;span style=&quot;color: darkblue;&quot;&gt;&lt;strong&gt;exceptions and rules&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;div style = &quot;text-align: right; margin-top: 2em;&quot;&gt;
+&lt;button onclick=&quot;window.history.back()&quot; style =&quot;font-size:22px;&quot;&gt;←&lt;/button&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+```python linenums=&quot;1&quot; hl_lines=&quot;1&quot;
+moeabench.pareto(exp.result, exp.pof, exp4.pof, objectives = [1,2,3])
+[&#39;exp.result = 3 objectives&#39;, &#39;exp.pof = 3 objectives&#39;, &#39;exp4.pof = 4 objectives&#39;] must be equals
+</code></pre></div></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span><span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp.pof = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.pof = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
@@ -2296,15 +2309,9 @@ The method allows the selection of any objective, provided that this objective e
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span><span class="n">Objective</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;obj&#39;</span><span class="p">,</span> <span class="s1">&#39;obj&#39;</span><span class="p">]</span> <span class="n">can</span><span class="err">´</span><span class="n">t</span> <span class="n">be</span> <span class="n">greather</span> <span class="n">than</span> <span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
-<p>```python linenums="1" hl_lines="1
+<p><code>python linenums="1" hl_lines="1
 moeabench.pareto(exp.result, exp.pof, exp2.pof,  objectives = [1,2])
-objectives = [1, 2] not be allowed. I is necessary to follow the format: objectives = [obj1, obj2, obj3] 
-<div class="highlight"><pre><span></span><code>```python linenums=&quot;1&quot; hl_lines=&quot;1
-moeabench.pareto(exp4.pof, exp4.result)
-</code></pre></div></p>
-<p><img alt="alt text" src="../img_pareto/pareto_7.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_8.jpeg" /></p>
-<p><img alt="alt text" src="../img_pareto/pareto_9.jpeg" /></p>
+objectives = [1, 2] not be allowed. I is necessary to follow the format: objectives = [obj1, obj2, obj3]</code></p>
 
 
 
