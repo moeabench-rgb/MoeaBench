@@ -1491,6 +1491,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="values ​​for objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1510,6 +1525,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1518,6 +1548,21 @@
       minimum of objectives
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="minimum of objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2129,6 +2174,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="values ​​for objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2148,6 +2208,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2156,6 +2231,21 @@
       minimum of objectives
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="minimum of objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2187,29 +2277,31 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="exception-thrown">exception thrown</h3>
-<p style="font-size: 16px;"><span style="color: darkred;"><strong>['exp.result = 3 objectives', 'exp.pof = 3 objectives', 'exp4.pof = 4 objectives'] must be equals</strong></span></p>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>['exp.result = 3 objectives', 'exp.pof = 3 objectives', 'exp4.pof = 4 objectives'] must be equals</strong></span></p>
 
 <h2 id="values-for-objectives">values ​​for objectives</h2>
 <p style="font-size: 17px;">No past objective can be greater than the objectives of the experiments.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-</span><span class="n">Objective</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;obj&#39;</span><span class="p">,</span> <span class="s1">&#39;obj&#39;</span><span class="p">]</span> <span class="n">can</span><span class="err">´</span><span class="n">t</span> <span class="n">be</span> <span class="n">greather</span> <span class="n">than</span> <span class="mi">3</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="exception-thrown_1">exception thrown</h3>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Objective(s) [6, 'obj', 'obj'] can´t be greather than 3</strong></span></p>
+
 <h2 id="valid-formats">valid formats</h2>
 <p style="font-size: 17px;">
 o array de objetivos passados ao parametro do metodo precisa ter um padrão.</p>
 
 <h3 id="type">type</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
-</span><span class="n">Only</span> <span class="n">arrays</span> <span class="n">are</span> <span class="n">allowed</span> <span class="ow">in</span> <span class="s1">&#39;objectives&#39;</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="exception-thrown_2">exception thrown</h4>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed</strong></span></p>
+
 <h3 id="minimum-of-objectives">minimum of objectives</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">I</span> <span class="ow">is</span> <span class="n">necessary</span> <span class="n">to</span> <span class="n">follow</span> <span class="n">the</span> <span class="nb">format</span><span class="p">:</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">,</span> <span class="n">obj3</span><span class="p">]</span> 
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="exception-thrown_3">exception thrown</h4>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>objectives = [1, 2] not be allowed. I is necessary to follow the format: objectives = [obj1, obj2, obj3] </strong></span></p>
 
 
 
