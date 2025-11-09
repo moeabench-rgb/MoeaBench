@@ -1468,18 +1468,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generation-range" class="md-nav__link">
+  <a href="#any-objectives" class="md-nav__link">
     <span class="md-ellipsis">
-      generation range
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combination-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      combination objectives
+      any objectives
     </span>
   </a>
   
@@ -2171,18 +2162,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generation-range" class="md-nav__link">
+  <a href="#any-objectives" class="md-nav__link">
     <span class="md-ellipsis">
-      generation range
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combination-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      combination objectives
+      any objectives
     </span>
   </a>
   
@@ -2248,11 +2230,11 @@
 <h3 id="configuration">configuration</h3>
 <h4 id="variables-types">variables types</h4>
 <p style="font-size: 17px;">
-The method accepts variables of type <span style="color: darkred;"><strong>result </strong></span>. For a better understanding of this variable, access the link:</p>
+The method accepts variables of type <span style="color: darkred;"><strong>experiment.result </strong></span>. For a better understanding of this variable, access the link:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentresult"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>variable experiment.result</strong></span></a></p>
 
-<p>The method accepts variables of type <span style="color: darkred;"><strong>pop </strong></span>. For a better understanding of this variable, access the link:</p></p>
+<p>The method accepts variables of type <span style="color: darkred;"><strong>experiment.pof </strong></span>. For a better understanding of this variable, access the link:</p></p>
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentpof"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>variable experiment.pof</strong></span></a></p>
 
 <h4 id="supported-variables">supported variables</h4>
@@ -2263,18 +2245,15 @@ The method accepts variables of type <span style="color: darkred;"><strong>resul
 <h3 id="flexibility">flexibility</h3>
 <p style="font-size: 17px;">The user can assign the following settings</p>
 
-<h4 id="generation-range">generation range</h4>
-<p style="font-size: 17px;">Any generation interval can be chosen. The graph will be plotted according to that range:</p>
+<h4 id="any-objectives">any objectives</h4>
+<p style="font-size: 17px;">
+The method allows the selection of any objective, provided that this objective exists in the variables experiment.pof and experiment.result.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">200</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="for generations" src="img_hypervolume/hyper_3.jpeg" /></p>
-<h4 id="combination-objectives">combination objectives</h4>
-<p style="font-size: 17px;">Hypervolume calculations can be performed with any combination of objectives.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="for generations" src="img_hypervolume/hyper_4.jpeg" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<p><img alt="alt text" src="../img_pareto/pareto_4.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto/pareto_5.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto/pareto_6.jpeg" /></p>
 <h4 id="generation-range-and-combination-objectives">generation range and combination objectives</h4>
 <p style="font-size: 17px;">It is possible to plot with a generation range and a given combination of objectives.</p>
 
@@ -2320,16 +2299,7 @@ The method accepts variables of type <span style="color: darkred;"><strong>resul
 <p>```python linenums="1" hl_lines="1
 moeabench.pareto(exp.result, exp.pof, exp2.pof,  objectives = [1,2])
 objectives = [1, 2] not be allowed. I is necessary to follow the format: objectives = [obj1, obj2, obj3] 
-<div class="highlight"><pre><span></span><code>moeabench.pareto(exp4.pof, exp4.result, objectives = [1,2,4])
-
-![alt text](img_pareto/pareto_4.jpeg)
-
-![alt text](img_pareto/pareto_5.jpeg)
-
-![alt text](img_pareto/pareto_6.jpeg)
-
-
-```python linenums=&quot;1&quot; hl_lines=&quot;1
+<div class="highlight"><pre><span></span><code>```python linenums=&quot;1&quot; hl_lines=&quot;1
 moeabench.pareto(exp4.pof, exp4.result)
 </code></pre></div></p>
 <p><img alt="alt text" src="../img_pareto/pareto_7.jpeg" /></p>
