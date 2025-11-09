@@ -1826,6 +1826,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#valid-generation-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      valid generation interval
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2222,6 +2231,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#valid-generation-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      valid generation interval
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2299,8 +2317,15 @@ The method accepts variables of type <span style="color: darkred;"><strong>resul
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
-<span class="n">exception</span> <span class="n">thrown</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp2.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp3.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.result = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="n">exception</span> <span class="n">thrown</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp2.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp3.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.result = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="valid-generation-interval">valid generation interval</h4>
+<p style="font-size: 17px;">The range of generations must be within the specified range for all experiments.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">450</span><span class="p">])</span>
+<span class="hll"><span class="n">generations</span> <span class="o">=</span> <span class="mi">450</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">It</span> <span class="n">must</span> <span class="n">be</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">400</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
