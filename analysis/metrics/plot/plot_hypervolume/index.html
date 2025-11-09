@@ -1814,81 +1814,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="exceptions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number-of-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      number of objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#valid-generation-interval" class="md-nav__link">
-    <span class="md-ellipsis">
-      valid generation interval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initial-and-final-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      initial and final generation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#values-for-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      values ​​for objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#valid-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      valid formats
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="valid formats">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generations" class="md-nav__link">
-    <span class="md-ellipsis">
-      generations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      objectives
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1987,6 +1912,29 @@
   
   <span class="md-ellipsis">
     IGD+
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../MoeaBench/docs/analysis/metrics/plot/exceptions.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exceptions
     
   </span>
   
@@ -2270,81 +2218,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="exceptions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number-of-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      number of objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#valid-generation-interval" class="md-nav__link">
-    <span class="md-ellipsis">
-      valid generation interval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initial-and-final-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      initial and final generation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#values-for-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      values ​​for objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#valid-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      valid formats
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="valid formats">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generations" class="md-nav__link">
-    <span class="md-ellipsis">
-      generations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      objectives
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -2412,49 +2285,9 @@ The method accepts variables of type <span style="color: darkred;"><strong>resul
 </code></pre></div></td></tr></table></div>
 <p><img alt="for generations" src="../img_hypervolume/hyper_6.jpeg" /></p>
 <h3 id="exceptions">exceptions</h3>
-<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.</p>
+<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:</p>
 
-<h4 id="number-of-objectives">number of objectives</h4>
-<p style="font-size: 17px;">All experiments passed as parameters in the method must have the same number of objectives. Otherwise, an exception is thrown.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
-<span class="hll"><span class="n">exception</span> <span class="n">thrown</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;exp.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp2.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp3.result = 3 objectives&#39;</span><span class="p">,</span> <span class="s1">&#39;exp4.result = 4 objectives&#39;</span><span class="p">]</span> <span class="n">must</span> <span class="n">be</span> <span class="n">equals</span>
-</span></code></pre></div></td></tr></table></div>
-<h4 id="valid-generation-interval">valid generation interval</h4>
-<p style="font-size: 17px;">The range of generations must be within the specified range for all experiments.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">450</span><span class="p">])</span>
-<span class="hll"><span class="n">generations</span> <span class="o">=</span> <span class="mi">450</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">It</span> <span class="n">must</span> <span class="n">be</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">400</span>
-</span></code></pre></div></td></tr></table></div>
-<h4 id="initial-and-final-generation">initial and final generation</h4>
-<p style="font-size: 17px;">The initial generation must be smaller than the final generation.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">450</span><span class="p">])</span>
-<span class="hll"><span class="n">the</span> <span class="n">initial</span> <span class="n">generation</span> <span class="n">must</span> <span class="n">be</span> <span class="n">smaller</span> <span class="n">than</span> <span class="n">the</span> <span class="n">final</span> <span class="n">generation</span>
-</span></code></pre></div></td></tr></table></div>
-<h4 id="values-for-objectives">values ​​for objectives</h4>
-<p style="font-size: 17px;">No past objective can be greater than the objectives of the experiments.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
-<span class="hll"><span class="n">Objective</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">[</span><span class="s1">&#39;obj&#39;</span><span class="p">,</span> <span class="s1">&#39;obj&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="n">can</span><span class="err">´</span><span class="n">t</span> <span class="n">be</span> <span class="n">greather</span> <span class="n">than</span> <span class="mi">3</span>
-</span></code></pre></div></td></tr></table></div>
-<h4 id="valid-formats">valid formats</h4>
-<p style="font-size: 17px;">The parameter format must be followed.</p>
-
-<h5 id="generations">generations</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span>
-<span class="hll"><span class="n">Only</span> <span class="n">arrays</span> <span class="n">are</span> <span class="n">allowed</span> <span class="ow">in</span> <span class="s1">&#39;generations&#39;</span>
-</span></code></pre></div></td></tr></table></div>
-<h5 id="objectives">objectives</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
-<span class="hll"><span class="n">Only</span> <span class="n">arrays</span> <span class="n">are</span> <span class="n">allowed</span> <span class="ow">in</span> <span class="s1">&#39;objectives&#39;</span>
-</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentresult"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>Exceptions</strong></span></a></p>
 
 
 
