@@ -1697,21 +1697,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="number of objectives">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exception-thrown" class="md-nav__link">
-    <span class="md-ellipsis">
-      exception thrown
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1725,7 +1710,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exception-thrown_1" class="md-nav__link">
+  <a href="#exception-thrown" class="md-nav__link">
     <span class="md-ellipsis">
       exception thrown
     </span>
@@ -1749,7 +1734,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exception-thrown_2" class="md-nav__link">
+  <a href="#exception-thrown_1" class="md-nav__link">
     <span class="md-ellipsis">
       exception thrown
     </span>
@@ -1771,6 +1756,15 @@
   
     <nav class="md-nav" aria-label="values ​​for objectives">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#exception-thrown_3" class="md-nav__link">
@@ -2221,21 +2215,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="number of objectives">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exception-thrown" class="md-nav__link">
-    <span class="md-ellipsis">
-      exception thrown
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2249,7 +2228,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exception-thrown_1" class="md-nav__link">
+  <a href="#exception-thrown" class="md-nav__link">
     <span class="md-ellipsis">
       exception thrown
     </span>
@@ -2273,7 +2252,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exception-thrown_2" class="md-nav__link">
+  <a href="#exception-thrown_1" class="md-nav__link">
     <span class="md-ellipsis">
       exception thrown
     </span>
@@ -2295,6 +2274,15 @@
   
     <nav class="md-nav" aria-label="values ​​for objectives">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-thrown_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception thrown
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#exception-thrown_3" class="md-nav__link">
@@ -2391,51 +2379,51 @@
 
 <h1 id="exceptions-and-rules"><strong>exceptions and rules</strong></h1>
 <h2 id="number-of-objectives">number of objectives</h2>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span>The <span style="color: darkred;"><strong>plot_hypervolume, plot_GD, plot_GDplus, plot_IGD</strong></span> and <span style="color: darkred;"><strong>plot_IGDplus </strong></span> methods utilize these exceptions and rules.</p>
-
-<p style="font-size: 17px;">All experiments passed as parameters in the method must have the same number of objectives. Otherwise, an exception is thrown.</p>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="exception-thrown">exception thrown</h3>
-<p style="font-size: 15px;"><span style="color: darkred;"><strong>['exp.result = 3 objectives', 'exp2.result = 3 objectives', 'exp3.result = 3 objectives', 'exp4.result = 4 objectives'] must be equals</strong></span></p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span>The <span style="color: darkred;"><strong>hypervolume, GD, GDplus, IGD</strong></span> and <span style="color: darkred;"><strong>IGDplus </strong></span> methods utilize these exceptions and rules.</p>
 
 <h2 id="valid-generation-interval">valid generation interval</h2>
-<p style="font-size: 17px;">The range of generations must be within the specified range for all experiments.</p>
+<p style="font-size: 17px;">The final generation value cannot be greater than the number of generations in the experiment.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_GD</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">450</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">hypervolume</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">460</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="exception-thrown_1">exception thrown</h3>
-<p style="font-size: 15px;"><span style="color: darkred;"><strong>generations = 450 not be allowed. It must be between 0 and 400</strong></span></p>
+<h3 id="exception-thrown">exception thrown</h3>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>generations = 460 not be allowed. It must be between 0 and 400</strong></span></p>
 
 <h2 id="initial-and-final-generation">initial and final generation</h2>
 <p style="font-size: 17px;">The initial generation must be smaller than the final generation.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_GDplus</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">450</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="exception-thrown_2">exception thrown</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">200</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="exception-thrown_1">exception thrown</h3>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>the initial generation must be smaller than the final generation</strong></span></p>
 
 <h2 id="values-for-objectives">values ​​for objectives</h2>
-<p style="font-size: 17px;">No past objective can be greater than the objectives of the experiments.</p>
+<p style="font-size: 17px;">No past objective can be greater than the objectives of the experiment.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_IGD</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="exception-thrown_2">exception thrown</h3>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Objective(s) ['obj', 7] can´t be greather than 3</strong></span></p>
+
+<p style="font-size: 17px;">No past achievement can be repeated.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="exception-thrown_3">exception thrown</h3>
-<p style="font-size: 15px;"><span style="color: darkred;"><strong>Objective(s) ['obj', 'obj', 4] can´t be greather than 3</strong></span></p>
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>There are repeated elements for objectives</strong></span></p>
 
 <h2 id="valid-formats">valid formats</h2>
 <p style="font-size: 17px;">The parameter format must be followed.</p>
 
 <h3 id="generations">generations</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_IGDplus</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">hypervolume</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="exception-thrown_4">exception thrown</h4>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'generations'</strong></span></p>
 
 <h3 id="objectives">objectives</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_hypervolume</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="exception-thrown_5">exception thrown</h4>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'objectives'</strong></span></p>
 

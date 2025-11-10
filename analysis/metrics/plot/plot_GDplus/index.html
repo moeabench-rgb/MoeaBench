@@ -1868,15 +1868,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#combination-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      combination objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#generation-range-and-combination-objectives" class="md-nav__link">
     <span class="md-ellipsis">
       generation range and combination objectives
@@ -2226,15 +2217,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#combination-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      combination objectives
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#generation-range-and-combination-objectives" class="md-nav__link">
     <span class="md-ellipsis">
       generation range and combination objectives
@@ -2309,11 +2291,21 @@ The method accepts variables of type <span style="color: darkred;"><strong>exper
 <h4 id="generation-range">generation range</h4>
 <p style="font-size: 17px;">Any generation interval can be chosen. The graph will be plotted according to that range:</p>
 
+<p style="font-size: 17px;"><span style="color: darkblue;"><strong>Note: </strong></span> 
+the metric calculation is performed for all objectives within the given range.</p
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_GDplus</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">200</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<p><img alt="for generations" src="../img_GDplus/GDPlus_1.jpeg" /></p>
-<h4 id="combination-objectives">combination objectives</h4>
-<p style="font-size: 17px;">GD+ calculations can be performed with any combination of objectives.</p>
+
+
+![for generations](img_GDplus/GDPlus_1.jpeg)
+
+#### combination objectives
+
+<p style="font-size: 17px;">
+<p>GD+ calculations can be performed with any combination of objectives.</p></p>
+<p style="font-size: 17px;"><span style="color: darkblue;"><strong>Note:</strong></span> 
+The metric calculation is based on the objectives selected for all generations.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moeabench</span><span class="o">.</span><span class="n">plot_GDplus</span><span class="p">(</span><span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span>  <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
