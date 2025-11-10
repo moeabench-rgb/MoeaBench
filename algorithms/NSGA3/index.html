@@ -2133,6 +2133,8 @@
 
 <h1 id="nsga-iii"><strong>NSGA III</strong></h1>
 <h2 id="moeabench-flexibility">🧩MoeaBench - flexibility</h2>
+<p style="font-size: 17px;">The NSGA_III method was configured as follows:</p>
+
 <table border="4">
 <thead>
 <tr>
@@ -2143,21 +2145,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="color: darkblack; font-size: 13px; vertical-align: middle;">muttation_prob = 1/self.Nvar </td>
-<td style="color: black; font-size: 13px; vertical-align: middle;">The probability of crossover is 1.0 and the probability of mutation is 1/n</td>
+<td style="color: black; font-size: 14px; vertical-align: middle;">muttation_prob = 1/self.Nvar </td>
+<td style="color: black; font-size: 14px; vertical-align: middle;">The probability of crossover is 1.0 and the probability of mutation is 1/n</td>
 <td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
 </tr>
 
 <tr>
-<td style="color: black; font-size: 13px; vertical-align: middle;">muttation=PolynomialMutation(prob=muttation_prob, eta=20)</td>
-<td style="color: black; font-size: 13px;vertical-align: middle;">variable wise polynomial mutation operator (with ηm = 20) </td>
+<td style="color: black; font-size: 14px; vertical-align: middle;">muttation=PolynomialMutation(prob=muttation_prob, eta=20)</td>
+<td style="color: black; font-size: 14px;vertical-align: middle;">variable wise polynomial mutation operator (with ηm = 20) </td>
 <td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
 </tr>                          
 
 
 <tr>
-<td style="color: black; font-size: 13px; vertical-align: middle;">crossover = SBX(prob=1.0, eta=15) </td>
-<td style="color: black; font-size: 13px; vertical-align: middle;">SBX recombination operator (with ηc = 15) </td>
+<td style="color: black; font-size: 14px; vertical-align: middle;">crossover = SBX(prob=1.0, eta=15) </td>
+<td style="color: black; font-size: 14px; vertical-align: middle;">SBX recombination operator (with ηc = 15) </td>
 <td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
 </tr>
 
@@ -2165,16 +2167,6 @@
 </tbody>
 </table>
 
-<p>pymoo</p>
-<p>moeabench implements the evolutionary algorithms of the pymoo multi-objective optimization library.</p>
-<p>The NSGA_III method was configured as follows.</p>
-<p>article by Deb, 2005</p>
-<p>The probability of crossover is 1.0 and the probability of mutation is 1/n
-muttation_prob = 1/self.Nvar</p>
-<p>variable wise polynomial mutation operator (with ηm = 20)      <br />
-muttation=PolynomialMutation(prob=muttation_prob, eta=20)</p>
-<p>SBX recombination operator (with ηc = 15)      <br />
-crossover = SBX(prob=1.0, eta=15)</p>
 <p style="font-size: 17px;">The method has the following default configuration:</p>
 <ul style="font-size:17px;">
 <li><strong><i>benchmark</i></strong>(benchmark problem) = 300</li>
