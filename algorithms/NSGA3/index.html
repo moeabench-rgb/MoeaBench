@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arguments" class="md-skip">
+        <a href="#nsga-iii" class="md-skip">
           Skip to content
         </a>
       
@@ -854,6 +854,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -886,6 +888,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -894,9 +898,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#moeabench-flexibility" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      🧩MoeaBench - flexibility
     </span>
   </a>
   
@@ -2093,6 +2097,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2101,9 +2107,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#moeabench-flexibility" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      🧩MoeaBench - flexibility
     </span>
   </a>
   
@@ -2125,9 +2131,29 @@
 
 
 
-  <h1>NSGA-III</h1>
+<h1 id="nsga-iii">**NSGA III **</h1>
+<h2 id="moeabench-flexibility">🧩MoeaBench - flexibility</h2>
+<table border="1">
+<thead>
+<tr>
+<td>article by Deb, 2005</td>
+<td>implement for 🧩MoeaBench</td>
+<td>pymoo imports</td>
+</tr>
+</thead>
 
-<h2 id="arguments"><strong>Arguments</strong></h2>
+</table>
+
+<p>pymoo</p>
+<p>moeabench implements the evolutionary algorithms of the pymoo multi-objective optimization library.</p>
+<p>The NSGA_III method was configured as follows.</p>
+<p>article by Deb, 2005</p>
+<p>The probability of crossover is 1.0 and the probability of mutation is 1/n
+muttation_prob = 1/self.Nvar</p>
+<p>variable wise polynomial mutation operator (with ηm = 20)      <br />
+muttation=PolynomialMutation(prob=muttation_prob, eta=20)</p>
+<p>SBX recombination operator (with ηc = 15)      <br />
+crossover = SBX(prob=1.0, eta=15)</p>
 <p style="font-size: 17px;">The method has the following default configuration:</p>
 <ul style="font-size:17px;">
 <li><strong><i>benchmark</i></strong>(benchmark problem) = 300</li>
@@ -2140,6 +2166,55 @@
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
 </div>
+
+<p>from pymoo.algorithms.moo.nsga3 import NSGA3
+from pymoo.optimize import minimize
+import numpy as np
+from pymoo.util.ref_dirs import get_reference_directions
+from pymoo.operators.crossover.sbx import SBX
+from pymoo.operators.mutation.pm import PolynomialMutation
+from pymoo.core.problem import Problem</p>
+<p>class NSGA_pymoo(Problem):</p>
+<div class="highlight"><pre><span></span><code>def __init__(self,benchmark,population,generations,seed):
+    self.benchmark=benchmark
+    self.population=population
+    self.generations=generations
+    self.seed=seed
+    self.n_ieq=self.benchmark.get_CACHE().get_BENCH_CI().get_n_ieq_constr()
+    self.Nvar=self.benchmark.get_CACHE().get_BENCH_CI().get_Nvar()
+    self.M=self.benchmark.get_CACHE().get_BENCH_CI().get_M()
+    self.BENCH_Nvar=self.benchmark.get_CACHE().get_BENCH_CI().get_BENCH_Nvar()
+    xl = np.full(self.Nvar,0)
+    xu = np.full(self.Nvar,1)
+    super(). __init__(n_var=self.Nvar, n_obj=self.M, n_ieq_constr=self.n_ieq, xl=xl, xu=xu)
+
+
+def _evaluate(self, x, out, *args, **kwargs):    
+    result = self.benchmark.evaluation(x,self.n_ieq)
+    out[&quot;F&quot;]=result[&#39;F&#39;]
+    if &quot;G&quot; in result:
+        out[&quot;G&quot;]=result[&#39;G&#39;]
+
+
+def exec(self):
+    ref_dirs = get_reference_directions(&quot;energy&quot;, self.M, self.population, seed = self.seed)
+    muttation_prob = 1/self.Nvar
+    muttation=PolynomialMutation(prob=muttation_prob, eta=20)
+    crossover = SBX(prob=1.0, eta=15)
+    nsga3 = NSGA3(ref_dirs=ref_dirs, pop_size=self.population, crossover=crossover,mutation=muttation)      
+    res_NSGA = minimize(
+        NSGA_pymoo(self.benchmark,self.population, self.generations,self.seed),
+        nsga3,
+        termination=(&#39;n_gen&#39;, self.generations),
+        seed=self.seed,
+        save_history=True,
+        verbose=False
+        )  
+    NSGA_algorithm={
+        &quot;NSGA-3&quot; :np.column_stack([res_NSGA.F])
+    }    
+    return (NSGA_algorithm,self.generations,self.population,res_NSGA.history,res_NSGA.X)
+</code></pre></div>
 
 
 
