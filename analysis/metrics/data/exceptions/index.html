@@ -2392,7 +2392,7 @@
 <h2 id="initial-and-final-generation">initial and final generation</h2>
 <p style="font-size: 17px;">The initial generation must be smaller than the final generation.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">200</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">GD</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">200</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="exception-thrown_1">exception thrown</h3>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>the initial generation must be smaller than the final generation</strong></span></p>
@@ -2400,14 +2400,14 @@
 <h2 id="values-for-objectives">values ​​for objectives</h2>
 <p style="font-size: 17px;">No passed objective can be greater than the objectives of the experiment.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">GDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">GDplus</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="exception-thrown_2">exception thrown</h3>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>Objective(s) ['obj', 7] can´t be greather than 3</strong></span></p>
 
 <p style="font-size: 17px;">No pased objective can be repeated.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGD</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">IGD</span> <span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="exception-thrown_3">exception thrown</h3>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>There are repeated elements for objectives</strong></span></p>
@@ -2422,7 +2422,7 @@
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'generations'</strong></span></p>
 
 <h3 id="objectives">objectives</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">IGDplus</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">IGDplus</span> <span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="exception-thrown_5">exception thrown</h4>
 <p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'objectives'</strong></span></p>
