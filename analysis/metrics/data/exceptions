@@ -1,0 +1,85 @@
+# **exceptions and rules**
+
+## number of objectives
+
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span>The <span style="color: darkred;"><strong>plot_hypervolume, plot_GD, plot_GDplus, plot_IGD</strong></span> and <span style="color: darkred;"><strong>plot_IGDplus </strong></span> methods utilize these exceptions and rules.</p>
+
+<p style="font-size: 17px;">All experiments passed as parameters in the method must have the same number of objectives. Otherwise, an exception is thrown.</p>
+
+```python linenums="1"  hl_lines="2"
+moeabench.plot_hypervolume(exp.result, exp2.result, exp3.result, exp4.result)
+```
+
+### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>['exp.result = 3 objectives', 'exp2.result = 3 objectives', 'exp3.result = 3 objectives', 'exp4.result = 4 objectives'] must be equals</strong></span></p>
+
+
+## valid generation interval
+
+<p style="font-size: 17px;">The range of generations must be within the specified range for all experiments.</p>
+
+```python linenums="1" hl_lines="2"
+moeabench.plot_GD(exp.result, exp2.result, exp3.result, exp4.result, generations = [100,450])
+```
+
+### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>generations = 450 not be allowed. It must be between 0 and 400</strong></span></p>
+
+
+## initial and final generation
+
+<p style="font-size: 17px;">The initial generation must be smaller than the final generation.</p>
+
+```python linenums="1" hl_lines="2"
+moeabench.plot_GDplus(exp.result, exp2.result, exp3.result, exp4.result, generations = [600,450])
+```
+
+### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>the initial generation must be smaller than the final generation</strong></span></p>
+
+
+## values ​​for objectives
+
+<p style="font-size: 17px;">No past objective can be greater than the objectives of the experiments.</p>
+
+```python linenums="1" hl_lines="2"
+moeabench.plot_IGD(exp.result, exp2.result, exp3.result, objectives = [1,3,4])
+```
+
+### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Objective(s) ['obj', 'obj', 4] can´t be greather than 3</strong></span></p>
+
+
+## valid formats
+
+<p style="font-size: 17px;">The parameter format must be followed.</p>
+
+### generations
+
+```python linenums="1" hl_lines="2"
+moeabench.plot_IGDplus(exp.result, exp2.result, exp3.result, exp4.result, generations = 600)
+```
+
+#### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'generations'</strong></span></p>
+
+
+
+### objectives
+
+```python linenums="1" hl_lines="2"
+moeabench.plot_hypervolume(exp.result, exp2.result, exp3.result, exp4.result, objectives = 4)
+```
+
+#### exception thrown
+
+<p style="font-size: 15px;"><span style="color: darkred;"><strong>Only arrays are allowed in 'objectives'</strong></span></p>
+
+<div style = "text-align: right; margin-top: 2em;">
+<button onclick="window.history.back()" style ="font-size:22px;">←</button>
+</div>
