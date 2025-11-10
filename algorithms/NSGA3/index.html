@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#nsga-iii" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -855,8 +850,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2083,8 +2076,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -2102,44 +2093,7 @@
 
 
 
-<h1 id="nsga-iii"><strong>NSGA III</strong></h1>
-<p style="font-size: 17px;">The NSGA_III method was configured as follows:</p>
-
-<table border="4">
-<thead>
-<tr>
-<td style="font-size: 17px; text-align: center; vertical-align: middle;  background-color: darkblue; color: white;"><strong>🧩implement for MoeaBench</strong></td>
-<td style="font-size: 17px; text-align: center; vertical-align: middle;  background-color: darkblue; color: white;"><strong>article by Deb, 2005</strong></td>
-<td style="font-size: 17px; text-align: center; vertical-align: middle;  background-color: darkblue; color: white;"><strong>pymoo library</strong></td>
-<td style="font-size: 17px; text-align: center; vertical-align: middle;  background-color: darkblue; color: white;"><strong>variable</strong></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="color: black; font-size: 14px; vertical-align: middle;">muttation_prob = 1/self.Nvar </td>
-<td style="color: black; font-size: 14px; vertical-align: middle;">The probability of crossover is 1.0 and the probability of mutation is 1/n</td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkred">&#10007;</td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
-</tr>
-
-<tr>
-<td style="color: black; font-size: 14px; vertical-align: middle;">muttation=PolynomialMutation(prob=muttation_prob, eta=20)</td>
-<td style="color: black; font-size: 14px;vertical-align: middle;">variable wise polynomial mutation operator (with ηm = 20) </td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkred">&#10007;</td>
-</tr>                          
-
-
-<tr>
-<td style="color: black; font-size: 14px; vertical-align: middle;">crossover = SBX(prob=1.0, eta=15) </td>
-<td style="color: black; font-size: 14px; vertical-align: middle;">SBX recombination operator (with ηc = 15) </td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkgreen">&#10003;</td>
-<td style="text-align: center; vertical-align: middle;  font-size: 20px; color: darkred">&#10007;</td>
-</tr>
-
-
-</tbody>
-</table>
+  <h1>NSGA-III</h1>
 
 <p style="font-size: 17px;">The method has the following default configuration:</p>
 <ul style="font-size:17px;">
@@ -2149,10 +2103,6 @@
 <li><strong><i>seed</i></strong>(seed <strong><i>| X<sub>M</sub> |</i></strong>) = 8</li>
 </ul>
 <p style="font-size: 17px;">The method accepts any configuration of values ​​for  <strong><i>generations, population, seed</i></strong>.</p>
-
-<div style = "text-align: right; margin-top: 2em;">
-<button onclick="window.history.back()" style ="font-size:22px;">←</button>
-</div>
 
 
 
