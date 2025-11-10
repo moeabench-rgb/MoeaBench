@@ -2337,6 +2337,10 @@
 <p style="font-size: 17px;">The <span style="color: darkred;"><strong>variable </strong></span> 
 The variable method uses decision variables in an evolutionary algorithm across generations. The method requires, as a parameter, a specific variable for the benchmark problem to return the data.</p>
 
+<p>!!! info "Purpose"
+    The <code>objective()</code> method retrieves the objective function values across generations.</p>
+<p>!!! warning "Invalid generation"
+    The final generation value cannot exceed the total number of generations in the experiment.</p>
 <h3 id="configuration">configuration</h3>
 <h4 id="data-format">data format</h4>
 <p style="font-size: 17px;">
@@ -2435,7 +2439,7 @@ An array is returned from the method, which can be stored in a variable and mani
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">variable_obj_6_all</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">variable</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">array referring to generation <span style="color: darkblue;"><strong>150</strong></span>.</p>
+<p style="font-size: 17px;">array corresponding to generation <span style="color: darkblue;"><strong>150</strong></span>.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">variable_obj_6_all</span><span class="p">[</span><span class="mi">150</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
@@ -2470,7 +2474,7 @@ An array is returned from the method, which can be stored in a variable and mani
        <span class="p">[</span><span class="mf">0.49955293</span><span class="p">],</span>
        <span class="p">[</span><span class="mf">0.49920281</span><span class="p">]])</span>
 </code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">array referring to generation <span style="color: darkblue;"><strong>232</strong></span>.</p>
+<p style="font-size: 17px;">array corresponding to generation <span style="color: darkblue;"><strong>232</strong></span>.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">variable_obj_6_all</span><span class="p">[</span><span class="mi">232</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
