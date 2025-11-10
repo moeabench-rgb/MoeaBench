@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plot-surface-pareto" class="md-skip">
+        <a href="#plot-pareto" class="md-skip">
           Skip to content
         </a>
       
@@ -2246,13 +2246,11 @@
 
 
 
-<h1 id="plot-surface-pareto"><strong>plot surface pareto</strong></h1>
+<h1 id="plot-pareto"><strong>plot pareto</strong></h1>
 <h2 id="purpose">purpose</h2>
-<p style="font-size: 17px;">The <span style="color: darkred;"><strong>pareto_surface</strong></span> method plots the optimal Pareto surface solutions found by an evolutionary algorithm and samples of the Pareto optimal frontier surface provided by a benchmark problem.</p>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong>pareto</strong></span> method plots the optimal solutions found by an evolutionary algorithm and samples of the pareto optimal front provided by a benchmark problem.</p>
 
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>NOTE: </strong></span> The benchmark problem used in the examples was <strong>DTLZ8</strong>. For more information about this problem, click on the link. </p>
-
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/problems/DTLZ8/DTLZ8/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>DTLZ8 benchmark problem</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/problems/DPF5/DPF5/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>DPF5 benchmark problem</strong></span></a></p>
 
 <p style="font-size: 17px;">Follow the link for other benchmark problems implemented by <strong><i>MoeaBench</i></strong>.</p>
 
@@ -2282,24 +2280,23 @@ The method allows the selection of any objective, provided that this objective e
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto_surface</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_1.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_2.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_3.jpeg" /></p>
 <h4 id="combination">combination</h4>
 <p style="font-size: 17px;">It is possible to combine variables of the type <span style="color: darkred"><strong>experimemnt.pof</strong></span> and <span style="color: darkred;"><strong>experimemnt.result</strong></span>, to compare the results of the optimal solutions found by the evolutionary algorithm with the samples of the pareto optimal front of the problem.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto_surface</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp2</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">exp3</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="img_pareto_surface/pareto_1.jpeg" />
-<img alt="alt text" src="img_pareto_surface/pareto_2.jpeg" />
-<img alt="alt text" src="img_pareto_surface/pareto_3.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_5.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_4.jpeg" /></p>
 <h4 id="default">default</h4>
 <p style="font-size: 17px;">
 In standard mode, the graph is plotted considering only the first three objectives, regardless of the number of objectives in the experiments passed to the method. In this example, the problem has four objectives, but in the default mode, only the first three objectives were shown.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">pareto_surface</span><span class="p">(</span><span class="n">exp4</span><span class="o">.</span><span class="n">pof</span><span class="p">,</span> <span class="n">exp4</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="alt text" src="img_pareto_surface/pareto_7.jpeg" /></p>
-<p><img alt="alt text" src="img_pareto_surface/pareto_8.jpeg" /></p>
-<p><img alt="alt text" src="img_pareto_surface/pareto_9.jpeg" /></p>
+<img alt="alt text" src="../img_pareto_surface/pareto_surface_6.jpeg" /></p>
+<p><img alt="alt text" src="../img_pareto_surface/pareto_surface_7.jpeg" /></p>
 <h3 id="exceptions">exceptions</h3>
 <p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:</p>
 
