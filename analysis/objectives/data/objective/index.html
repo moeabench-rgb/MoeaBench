@@ -2565,49 +2565,6 @@ The metric calculation is based on the objectives selected for all generations..
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
 </div>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">HV_all</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">()</span>
-</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.33666366</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.39733727</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.46764389</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.52164528</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.56468112</span><span class="p">],</span>
-       <span class="o">...</span>
-       <span class="p">[</span><span class="mf">0.69800459</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69811959</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69850582</span><span class="p">]])</span>
-</code></pre></div></td></tr></table></div>
-<p>HV_2_3 = exp.hypervolume(generations = [190,200], objectives = [2,3])</p>
-<p>array([[1.20994938],
-       [1.20995652],
-       [1.20995652],
-       [1.2099565 ],
-       [1.20995897],
-       [1.20996597],
-       [1.20996299],
-       [1.20995199],
-       [1.20995299],
-       [1.20995299]])</p>
-<p>HV_1_3 = exp.hypervolume(generations = [190,200], objectives = [1,3])</p>
-<p>array([[1.20996725],
-       [1.20998082],
-       [1.20999331],
-       [1.20999331],
-       [1.20998094],
-       [1.20998094],
-       [1.20998093],
-       [1.20998093],
-       [1.20998132],
-       [1.20998049]])</p>
-
 
 
 
