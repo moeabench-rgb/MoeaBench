@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hypervolume" class="md-skip">
+        <a href="#objectives-in-generations" class="md-skip">
           Skip to content
         </a>
       
@@ -1417,6 +1417,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#variable-return_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable return
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1433,7 +1442,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_1" class="md-nav__link">
+  <a href="#variable-return_2" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -1457,7 +1466,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_2" class="md-nav__link">
+  <a href="#variable-return_3" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -1481,7 +1490,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_3" class="md-nav__link">
+  <a href="#variable-return_4" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -2295,6 +2304,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#variable-return_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable return
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2311,7 +2329,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_1" class="md-nav__link">
+  <a href="#variable-return_2" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -2335,7 +2353,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_2" class="md-nav__link">
+  <a href="#variable-return_3" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -2359,7 +2377,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-return_3" class="md-nav__link">
+  <a href="#variable-return_4" class="md-nav__link">
     <span class="md-ellipsis">
       variable return
     </span>
@@ -2407,9 +2425,9 @@
 
 
 
-<h1 id="hypervolume"><strong>hypervolume</strong></h1>
+<h1 id="objectives-in-generations"><strong>Objectives in generations</strong></h1>
 <h2 id="purpose">purpose</h2>
-<p style="font-size: 17px;">The <span style="color: darkred;"><strong>hypervolume </strong></span> method calculates the hypervolume of objectives across generations and plots the results.</p>
+<p style="font-size: 17px;">The <span style="color: darkred;"><strong>objective </strong></span> method displays the solutions of an evolutionary algorithm across generations. The method requires, as a parameter, a specific <stromg>objective</strong> for the benchmark problem in order to return the data.</p>
 
 <h3 id="configuration">configuration</h3>
 <h4 id="variables-types">variables types</h4>
@@ -2422,18 +2440,23 @@ The method accepts variables of type <span style="color: darkred;"><strong>exper
 <p style="font-size: 17px;">
 An array is returned from the method, which can be stored in a variable and manipulated in any way the user prefers:</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">hypervolume</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">objective</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">objective</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="flexibility">flexibility</h3>
 <p style="font-size: 17px;">The user can assign the following settings</p>
 
 <h4 id="generation-range">generation range</h4>
-<p style="font-size: 17px;">Any generation interval can be chosen. The graph will be plotted according to that range:</p>
+<p style="font-size: 17px;">Any generation interval can be chosen. The returned array will be in accordance with this range.</p>
 
-<p style="font-size: 17px;"><span style="color: darkblue;"><strong>Note: </strong></span> 
-the metric calculation is performed for all objectives within the given range..</p>
+<p style="font-size: 17px;"><span style="color: darkblue;"><strong>Note: </strong></span> The example below shows the solutions of the evolutionary algorithm for objective one, throughout generations 130 and 131.</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">HV_gen_130_150</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">130</span><span class="p">,</span><span class="mi">150</span><span class="p">])</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objective_130_132</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">objective</span><span class="p">(</span><span class="n">objective</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">130</span><span class="p">,</span><span class="mi">132</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">The array contains two inner arrays, corresponding to the two generations within this interval.</p>
+
+<p style="font-size: 17px;">Accessing the array related to the variable objective_130_132 at position one, corresponding to generation 130.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objective_130_132</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
 </code></pre></div></td></tr></table></div>
 <h5 id="variable-return">variable return</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2450,41 +2473,66 @@ the metric calculation is performed for all objectives within the given range..<
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">array</span><span class="p">([[</span><span class="mf">0.69594213</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69634242</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69600147</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.6956601</span> <span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69611218</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69613185</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69577172</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69609111</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69627322</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69665085</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69665634</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69573796</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69567078</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69617126</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69667052</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.6963271</span> <span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69708148</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.6964578</span> <span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69605514</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">0.69598902</span><span class="p">]])</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">array</span><span class="p">([[</span><span class="mf">3.24436193e-06</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">9.33255733e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">9.58009988e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">9.95690423e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">8.56882918e-01</span><span class="p">],</span>
+       <span class="o">...</span>
+       <span class="p">[</span><span class="mf">9.40144396e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">7.68626222e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">3.96758071e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">3.89010004e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">5.99102588e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">8.85216183e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.00192926e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">2.34811444e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.68584540e-01</span><span class="p">]])</span>
+</code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">Accessing the array related to the variable objective_130_132 at position one, corresponding to generation 131.</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objective_130_132</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
+</code></pre></div></td></tr></table></div>
+<h5 id="variable-return_1">variable return</h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">array</span><span class="p">([[</span><span class="mf">7.15638424e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.83987407e-04</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">5.28988182e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">9.79031526e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">4.84166155e-01</span><span class="p">],</span>
+       <span class="o">...</span>
+       <span class="p">[</span><span class="mf">5.24085737e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.05085103e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.44857279e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">8.68068450e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">2.34980875e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">8.71087780e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.52676841e-02</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">9.44028179e-01</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">2.77565448e-01</span><span class="p">]])</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="combination-objectives">combination objectives</h4>
 <p style="font-size: 17px;">Hypervolume calculations can be performed with any combination of objectives.</p>
 
 <p style="font-size: 17px;"><span style="color: darkblue;"><strong>Note:</strong></span> 
-The metric calculation is based on the objectives selected for all generations..</p>
+The metric calculation is based on the objectives selected for all generations.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">HV_obj_1_3</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="variable-return_1">variable return</h5>
+<h5 id="variable-return_2">variable return</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2520,7 +2568,7 @@ The metric calculation is based on the objectives selected for all generations..
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">HV_gen_200_210_obj_2_3</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">(</span><span class="n">generations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="mi">210</span><span class="p">],</span> <span class="n">objectives</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="variable-return_2">variable return</h5>
+<h5 id="variable-return_3">variable return</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2546,7 +2594,7 @@ The metric calculation is based on the objectives selected for all generations..
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">HV_all</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">hypervolume</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="variable-return_3">variable return</h5>
+<h5 id="variable-return_4">variable return</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2580,9 +2628,9 @@ The metric calculation is based on the objectives selected for all generations..
        <span class="p">[</span><span class="mf">0.69850582</span><span class="p">]])</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="exceptions">exceptions</h3>
-<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered.Information regarding exceptions and rules can be accessed at this link:</p>
+<p style="font-size: 17px;">To protect the integrity of the data passed as parameters, certain rules and exceptions are considered. Information regarding exceptions and rules can be accessed at this link:</p>
 
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/analysis/metrics/plot/exceptions/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>exceptions and rules</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/analysis/metrics/data/exceptions/"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>exceptions and rules</strong></span></a></p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
