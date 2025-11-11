@@ -2259,68 +2259,67 @@
 </div>
 </div>
 
-<div style="display: flex; gap: 20px ; margin-bottom: 20px; align-items: stretch;">
+<div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: stretch;">
 
-<div style="flex: 1; border: 1px solid #ddd; padding: 10px;">
-<div style="display: flex; align-items: center; gap: 10px;">
-   <img src="icon_analyse.png" alt="Figura 1B" style="max-width: 15%;">
-   <p style="font-size: 20px;"><i>Analysis Data</i></p>
+  <!-- Analysis Data Card -->
+  <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid #ddd; padding: 10px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="icon_analyse.png" alt="Figura 1B" style="max-width: 15%;">
+      <p style="font-size: 20px;"><i>Analysis Data</i></p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; flex: 1;">
+      <p style="font-size: 15px;"><b>Objectives</b></p>
+      <ul>
+        <li><span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>: 
+            <a href="analysis/objectives/data/objective"><b>objective</b></a>, 
+            <a href="analysis/objectives/data/exceptions/"><b>exceptions</b></a></li>
+        <li><span style="color: darkred; font-size: 16px;"><strong><i>plot</i></strong></span>: 
+            <b><a href="analysis/objectives/plot/pareto">Pareto</a>, 
+               <a href="analysis/objectives/plot/pareto_surface">surface Pareto</a>, 
+               <a href="analysis/objectives/plot/exceptions">exceptions</a></b></li>
+      </ul>
+
+      <p style="font-size: 15px;"><b>Metrics</b></p>
+      <ul>
+        <li><span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>: 
+            <b><a href="analysis/metrics/data/hypervolume">hypervolume</a>, 
+               <a href="analysis/metrics/data/GD">GD</a>, 
+               <a href="analysis/metrics/data/GDplus">GD+</a>, 
+               <a href="analysis/metrics/data/IGD">IGD</a>, 
+               <a href="analysis/metrics/data/IGDplus">IGD+</a>, 
+               <a href="analysis/metrics/data/exceptions/">exceptions</a></b></li>
+        <li><span style="color: darkred; font-size: 16px;"><strong><i>plot</i></strong></span>: 
+            <b><a href="analysis/metrics/plot/plot_hypervolume">hypervolume</a>, 
+               <a href="analysis/metrics/plot/plot_GD">GD</a>, 
+               <a href="analysis/metrics/plot/plot_GDplus">GD+</a>, 
+               <a href="analysis/metrics/plot/plot_IGD">IGD</a>, 
+               <a href="analysis/metrics/plot/plot_IGDplus">IGD+</a>, 
+               <a href="analysis/metrics/plot/exceptions">exceptions</a></b></li>
+      </ul>
+
+      <p style="font-size: 15px;"><b>Decision variables</b></p>
+      <ul>
+        <li><span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>: 
+            <b><a href="analysis/variables/data/variable">variable</a>, 
+               <a href="analysis/objectives/data/exceptions/"><b>exceptions</b></a></b></li>
+      </ul>
+    </div>
   </div>
 
-<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; flex: 1;">
+  <!-- Experiments Card -->
+  <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid #ddd; padding: 10px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="icon_experiment.png" alt="Figura 1B" style="max-width: 15%;">
+      <p style="font-size: 20px;"><i>Experiments</i></p>
+    </div>
 
-
-
-   <p style="font-size: 15px;"><b> Objectives</b></p>
-
-   <ul>
-   <li> <span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>: <a href =  "analysis/objectives/data/objective"><b> objective </b></a>, <a href =  "analysis/objectives/data/exceptions/"><b> exceptions </b></a></li>
-
-   <li><span style="color: darkred; font-size: 16px;"><strong><i>plot</i></strong></span>: <b><a href = "analysis/objectives/plot/pareto">Pareto</a>,  <a href = "analysis/objectives/plot/pareto_surface">surface Pareto</a>, <a href = "analysis/objectives/plot/exceptions">exceptions</a></b> </li>
-   </ul>
-
-
-
-
-<p style="font-size: 15px;"><b> Metrics</b></p>
-
-
-
-  <ul>
-  <li><span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>:   <b><a href = "analysis/metrics/data/hypervolume">hypervolume</a>, <a href = "analysis/metrics/data/GD">GD</a>, <a href = "analysis/metrics/data/GDplus">GD+</a>, <a href = "analysis/metrics/data/IGD">IGD</a>, <a href = "analysis/metrics/data/IGDplus">IGD+</a>, <a href = "analysis/metrics/data/exceptions/">exceptions</a></b>   </li>
-
-  <li><span style="color: darkred; font-size: 16px;"><strong><i>plot</i></strong></span>:   <b><a href = "analysis/metrics/plot/plot_hypervolume">hypervolume</a>, <a href = "analysis/metrics/plot/plot_GD">GD</a>, <a href = "analysis/metrics/plot/plot_GDplus">GD+</a>, <a href = "analysis/metrics/plot/plot_IGD">IGD</a>, <a href = "analysis/metrics/plot/plot_IGDplus">IGD+</a>, <a href = "analysis/metrics/plot/exceptions">exceptions</a></b>   </li>
-  </ul>
-
-
-
-
-<p style="font-size: 15px;"><b> Decision variables</b></p>
-
-
-<ul>
-<li><span style="color: darkred; font-size: 16px;"><strong><i>data</i></strong></span>:   <b><a href = "analysis/variables/data/variable">variable</a>, <a href =  "analysis/objectives/data/exceptions/"><b> exceptions </b></a> </b></li>
-</ul>
-
-
-</div>
-
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; flex: 1;">
+      <p style="font-size: 15px;"><b><a href="experiments/combinations/combinations">Experiment combinations</a></b></p>
+      <p style="font-size: 15px;"><b><a href="experiments/save_experiment/save_experiment">Save the experiment</a></b></p>
+      <p style="font-size: 15px;"><b><a href="experiments/load_experiment/load_experiment">Load and use the experiment</a></b></p>
+    </div>
   </div>
-
-
-
-
-<div style="flex: 1; border: 1px solid #ddd; padding: 10px;">
-<div style="display: flex; align-items: center; gap: 10px;">
-   <img src="icon_experiment.png" alt="Figura 1B" style="max-width: 15%;">
-   <p style="font-size: 20px;"><i>Experiments</i></p>
-  </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; flex: 1;">
-  <p style="font-size: 15px;"><b><b><a href = "experiments/combinations/combinations">Experiment combinations</a></b></p>
-  <p style="font-size: 15px;"><b><b><a href = "experiments/save_experiment/save_experiment">Save the experiment</a></b></p>
-  <p style="font-size: 15px;"><b><b><a href = "experiments/load_experiment/load_experiment">Load and use the experiment</a></b></p>
-  </div>
-</div>
 
 </div>
 
