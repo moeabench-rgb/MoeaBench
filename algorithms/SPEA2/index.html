@@ -2281,11 +2281,11 @@
 
 <h1 id="spea-ii"><strong>SPEA-II</strong></h1>
 <h2 id="reference">reference</h2>
-<p style="font-size: 17px;">The SPEA-II algorithm is an evolutionary algorithm used by MoeaBench for performance testing with framework benchmark problems or user-implemented problems. All libraries and operators are owned by the multi-objective optimization website pymoo. For more information about link here:</p>
+<p style="font-size: 17px;">The SPEA-II algorithm is an evolutionary algorithm used by MoeaBench for performance testing with framework benchmark problems or user-implemented problems. All libraries and operators are owned by the multi-objective optimization <strong><i>pymoo</strong></i>. For more information about link here:</p>
 
 <p style="font-size: 17px;"><a href = "https://doi.org/10.1109/ACCESS.2020.2990567"><span style="color: darkblue;"><strong>official pymoo documentation</strong></span></a></p>
 
-<p style="font-size: 17px;"><a href = "https://sop.tik.ee.ethz.ch/publicationlistfiles/zlt2001a.pdf"><span style="color: darkblue;"><strong>Official documentation of the SPEA-II algorithm.</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://sop.tik.ee.ethz.ch/publicationlistfiles/zlt2001a.pdf"><span style="color: darkblue;"><strong>official documentation of the SPEA-II algorithm.</strong></span></a></p>
 
 <h2 id="example">example</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">SPEA_II</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
