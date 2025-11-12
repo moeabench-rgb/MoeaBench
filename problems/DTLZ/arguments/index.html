@@ -549,6 +549,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -581,6 +583,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -589,11 +593,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#m" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      M
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="M">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    <span class="md-ellipsis">
+      K
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="K">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      P
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2233,6 +2309,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2241,11 +2319,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#m" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      M
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="M">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    <span class="md-ellipsis">
+      K
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="K">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      P
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2265,16 +2415,28 @@
 
 
 
-  <h1>arguments</h1>
+<h1 id="arguments"><strong>Arguments</strong></h1>
+<h2 id="m">M</h2>
+<p style="font-size: 17px;">The variable M represents the objectives of the problem. The Pareto optimal front is found when one objective can no longer be improved by worsening any other objective.
+.</p>
 
-<h2 id="arguments"><strong>Arguments</strong></h2>
-<p style="font-size: 17px;">The method has the following default configuration:</p>
-<ul style="font-size:17px;">
-<li><strong><i>M</i></strong>(problem objectives) = 3</li>
-<li><strong><i>K</i></strong>(value for vector size <strong><i>| X<sub>M</sub> |</i></strong>) = 5</li>
-<li><strong><i>P</i></strong>(number of points / solutions of the problem) = 700</li>
-</ul>
-<p style="font-size: 17px;">The method accepts any configuration of values ​​for the problem variables, including any number for <strong><i>M</i></strong>.</p>
+<h3 id="default">default</h3>
+<p style="font-size: 17px;">If not passed as a parameter, the assumed value is <span style="color: darkred;"><strong>3</strong></span>.</p>
+
+<h2 id="k">K</h2>
+<p style="font-size: 17px;">The variable K represents a specific range of decision variables. The objective functions use these variables to minimize the g-function and consequently find the Pareto optimal front.</p>
+
+<h3 id="default_1">default</h3>
+<p style="font-size: 17px;">If not passed as a parameter, the assumed value is <span style="color: darkred;"><strong>5</strong></span>.</p>
+
+<h2 id="p">P</h2>
+<p style="font-size: 17px;">The variable P represents a sample of the Pareto optimal front, configured in the benchmark problem</p>
+
+<h3 id="notes">NOTES</h3>
+<p style="font-size: 17px;">This sample does not represent the set of solutions of the evolutionary algorithm, but only a simulation of the Pareto front.</p>
+
+<h3 id="default_2">default</h3>
+<p style="font-size: 17px;">If not passed as a parameter, the assumed value is <span style="color: darkred;"><strong>700</strong></span>.</p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
