@@ -414,9 +414,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#experimentresult" class="md-nav__link">
+  <a href="#experimentpof" class="md-nav__link">
     <span class="md-ellipsis">
-      experiment.result
+      experiment.pof
     </span>
   </a>
   
@@ -2326,9 +2326,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#experimentresult" class="md-nav__link">
+  <a href="#experimentpof" class="md-nav__link">
     <span class="md-ellipsis">
-      experiment.result
+      experiment.pof
     </span>
   </a>
   
@@ -2377,20 +2377,20 @@
 <h2 id="reference">reference</h2>
 <p style="font-size: 17px;">The DTLZ1 benchmark problem is part of the list of proprietary implementations of the MoeaBench framework. All characteristics and definitions of the problem were based on the article <sytrong><i>DEB, K.; THIELE, L.; LAUMANNS, M.; ZITZLER, E. Scalable test problems for evolutionary multi-objective optimization. In: ABRAHAM, A.; JAIN, L.; GOLDBERG, R. (eds.). Evolutionary multi-objective optimisation. Berlin: Springer, 2005. p. 105-145.</strong></i> For more information about link here:</p>
 
-<p style="font-size: 17px;"><a href = "https://eckartzitzler.ch/img/publications/dtlz2005a.pdf?utm_source=chatgpt.com"><span style="color: darkblue;"><strong>article</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://eckartzitzler.ch/img/publications/dtlz2005a.pdf?utm_source=chatgpt.com"><span style="color: darkblue;"><strong>official article from 2005</strong></span></a></p>
 
 <h2 id="example">example</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">exp</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DPF5</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="method-return">method return</h2>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.moea </strong></span> receives mandatory methods from the evolutionary algorithm. Receive more information at this link:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.problem </strong></span> receives mandatory methods from the benchmark problem. Receive more information at this link:</p>
 
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_moea/example_code/example_code/#variable-experimentmoea"><span style="color: darkblue;"><strong>variable experiment.moea</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_benchmark/example_code/example_code/#variable-experimentproblem"> <span style="color: darkblue;"><strong>variable experiment.problem</strong></span></a></p>
 
-<h3 id="experimentresult">experiment.result</h3>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.result </strong></span>  receives the return value from the variable <strong>experiment.moea</strong>.Receive more information at this link:</p>
+<h3 id="experimentpof">experiment.pof</h3>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.pof </strong></span>  receives the return value from the variable <strong>experiment.problem</strong>.Receive more information at this link:</p>
 
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentresult"><span style="color: darkblue;"><strong>variable experiment.result</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentpof"><p style="font-size: 17px;"><span style="color: darkblue;"><strong>variable experiment.pof</strong></span></a></p>
 
 <h2 id="arguments">arguments</h2>
 <p style="font-size: 17px;">To learn about the arguments passed to the evolutionary algorithm, click on the link:</p>
