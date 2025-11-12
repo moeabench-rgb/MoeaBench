@@ -2218,6 +2218,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#function-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function g
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective functions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2238,7 +2256,7 @@
 <p style="font-size: 17px;">The DTLZ1 problem has a Pareto optimal front formed by a linear hyperplane:</p>
 
 <div class="arithmatex">\[
-\boldsymbol{\textcolor{blue}{f_1}(X)} + \underbrace{\boldsymbol{\textcolor{blue}{f_2}(X)} + \boldsymbol{....}}_{\text{M &gt; 3}} + \boldsymbol{\textcolor{blue}{f_{M-1}}(X)} + \boldsymbol{\textcolor{blue}{f_{M}}(X) = 0.5} \Longrightarrow \boldsymbol{\sum_{m=1}^M\textcolor{blue}{f_{M}^*} = 0.5}
+\boldsymbol{\textcolor{blue}{f_1}(X)} + \underbrace{\boldsymbol{\textcolor{blue}{f_2}(X)} + \boldsymbol{....}}_{\text{M &gt; 3} } + \boldsymbol{\textcolor{blue}{f_{M-1}}(X)} + \boldsymbol{\textcolor{blue}{f_{M}}(X) = 0.5} \Longrightarrow \boldsymbol{\sum_{m=1}^M\textcolor{blue}{f_{M}^*} = 0.5}
 \]</div>
 <p style="font-size: 17px;">DTLZ1 is defined by the following variables:</p>
 
@@ -2251,32 +2269,29 @@
 <div class="arithmatex">\[
 \boldsymbol{K}\text{ is the value of the vector } \boldsymbol{\big|X_M\big|} \text{ where all } \boldsymbol{X_i} \text{ belong to } \boldsymbol{X_M}\text{ }\boldsymbol{(X_i \in X_M)}
 \]</div>
-<p style="font-size: 17px;">The value of <strong><i>N</i></strong> can be obtained from the equation <strong><i>N = K + M - 1</i></strong> by substituting the value of <strong><i>K</i></strong>. Alternatively, the value of <strong><i>K</i></strong> can be defined by the equation <strong><i>K = N - M + 1</i></strong>, by substituting the value of <strong><i>N</i></strong>.</p>
+<p style="font-size: 17px;">The value of <strong><i>N</i></strong> can be obtained from the equation <strong><i>N = K+M-1</i></strong> by substituting the value of <strong><i>K</i></strong>. Alternatively, the value of <strong><i>K</i></strong> can be defined by the equation <strong><i>K = N-M+1</i></strong>, substituting the value of <strong><i>N</i></strong>.</p>
 
-<hr />
 <h2 id="example"><strong>Example</strong></h2>
 <h3 id="for-m-3"><strong>For M = 3</strong></h3>
 <div class="arithmatex">\[
 \large \underbrace{f_1}_{\boldsymbol{\textcolor{blue}{f_1}(X)}}, \underbrace{f_2}_{\boldsymbol{\textcolor{blue}{f_{M-1}}(X)}}, \underbrace{f_3}_{\boldsymbol{\textcolor{blue}{f_M}(X)}}
 \]</div>
-<p style="font-size: 17px;">Where <strong><i>f<sub>1</sub>, f<sub>2</sub>, and f<sub>3</sub></i></strong> are the objective functions according to the total number of <strong><i>(M = 3)</i></strong>.</p>
+<p style="font-size: 17px;">Where <strong><i>f<sub>1</sub> ,f<sub>2</sub> and f<sub>3</sub></i></strong> are the objective functions according to the total number of <strong><i>(M = 3)</i></strong>.</p>
 
-<p style="font-size: 17px;">Define the value of <strong><i>K</i></strong> assuming a value of <strong><i>N =</i></strong> 10, using the equation:</p>
-<p style="font-size: 17px;"><strong><i>K</i></strong> = 10 - 3 + 1 = 8.</p>
-
+<p style="font-size: 17px;">Define the value of <strong><i>K</i></strong> assuming <strong><i>N = </i></strong>10, using the equation:</p>
+<p style="font-size: 17px;"><strong><i>K</i></strong> = 10-3+1 = 8.</p>
 <p style="font-size: 17px;"><strong><i>Or</i></strong></p>
-
-<p style="font-size: 17px;">Define the value of <strong><i>N</i></strong> assuming a value of <strong><i>K =</i></strong> 8, using the equation:</p>
-<p style="font-size: 17px;"><strong><i>N</i></strong> = 8 + 3 - 1 = 10.</p>
+<p style="font-size: 17px;">Define the value of <strong><i>N</i></strong> assuming <strong><i>K = </i></strong>8, using the equation:</p>
+<p style="font-size: 17px;"><strong><i>N</i></strong> = 8+3-1 = 10.</p>
 
 <p style="font-size: 17px;">For the problem with <strong><i>M</i></strong> = 3, <strong><i>N</i></strong> = 10 and <strong><i>K</i></strong> = 8, we have:</p>
 
 <div class="arithmatex">\[
-\large x_1, \underbrace{x_2}_{\boldsymbol{X_{M-1}}}, \underbrace{\underbrace{\underbrace{x_3}_{\boldsymbol{X_M}}, x_4, x_5, x_6, x_7, x_8, x_9, x_{10}}_{\boldsymbol{K = \big|X_M\big| = (X_i \in X_M)}}}_{\textcolor{darkred}{\Large \boldsymbol{g(X_M)}}}
+\large x_1, \underbrace{x_2}_{\boldsymbol{X_{M-1}}}, \underbrace{\underbrace{\underbrace{x_3}_{\boldsymbol{X_M}}, x_4, x_5, x_6, x_7, x_8, x_9, x_{10}}_{\boldsymbol{K = \big|X_M\big| = (X_I \in X_M)}}}_{\textcolor{darkred}{\Large \boldsymbol{g(X_M)}}}
 \]</div>
-<p style="font-size: 17px;">The positions <strong><i>X<sub>M-1</sub></i></strong> and <strong><i>X<sub>M</sub></i></strong> are represented by <strong><i>x<sub>2</sub></i></strong> and <strong><i>x<sub>3</sub></i></strong>, respectively. The vector size <strong><i>|X<sub>M</sub>|</i></strong> is defined by the value <strong><i>K</i></strong> = 8, starting from <strong><i>x<sub>3</sub></i></strong> up to the last <strong><i>K = 8</i></strong> variable denoted by <strong><i>x<sub>10</sub></i></strong>.</p>
+<p style="font-size: 17px;">The positions <strong><i>X<sub>M-1</sub></i></strong> and <strong><i>X<sub>M</sub></i></strong> are represented by <strong><i>x<sub>2</sub></i></strong> and <strong><i>x<sub>3</sub></i></strong>, respectively. The vector size <strong><i>| X<sub>M</sub> |</i></strong> is defined by <strong><i>K</i></strong> = 8, starting at <strong><i>x<sub>3</sub></i></strong> and continuing until the last <strong><i>K = 8</i></strong> variables, denoted by <strong><i>x<sub>10</sub></i></strong>.</p>
 
-<p style="font-size: 17px;">The function <span style="color: darkred;"><strong><i>g(X<sub>M</sub>)</i></strong></span>, which corresponds to the decision variables within the interval of <strong><i>|X<sub>M</sub>|</i></strong> (<strong><i>x<sub>3</sub>, x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>, x<sub>7</sub>, x<sub>8</sub>, x<sub>9</sub>, x<sub>10</sub></i></strong>), must be <i>minimized</i> by evolutionary algorithms (<strong><i>MOEAs</i></strong>). When the value of this function reaches <span style="color: darkred;"><strong><i>g = 0</i></strong></span>, the Pareto optimal front of the problem is found.</p>
+<p style="font-size: 17px;">The function <span style="color: darkred;"><strong><i>g( X<sub>M</sub> )</i></strong></span> corresponds to the decision variables within the range of <strong><i>| X<sub>M</sub> |</i></strong> (<strong><i>x<sub>3</sub>  x<sub>4</sub>  x<sub>5</sub>  x<sub>6</sub> x<sub>7</sub>  x<sub>8</sub>  x<sub>9</sub>  x<sub>10</sub></i></strong>), and must be <i>minimized</i> by evolutionary algorithms (<strong><i>MOEAs</i></strong>). When this function reaches <span style="color: darkred;"><strong><i>g = 0</i></strong></span>, the Pareto optimal front of the problem is found.</p>
 
 <hr />
 <h3 id="for-m-4"><strong>For M = 4</strong></h3>
@@ -2285,18 +2300,45 @@
 \]</div>
 <p style="font-size: 17px;">Where <strong><i>f<sub>1</sub>, f<sub>2</sub>, f<sub>3</sub>, and f<sub>4</sub></i></strong> are the objective functions according to the total number of <strong><i>(M = 4)</i></strong>.</p>
 
-<p style="font-size: 17px;">Define the value of <strong><i>K</i></strong> assuming a value of <strong><i>N =</i></strong> 10, using the equation:</p>
-<p style="font-size: 17px;"><strong><i>K</i></strong> = 10 - 4 + 1 = 7.</p>
-
+<p style="font-size: 17px;">Define the value of <strong><i>K</i></strong> assuming <strong><i>N = </i></strong>10, using the equation:</p>
+<p style="font-size: 17px;"><strong><i>K</i></strong> = 10-4+1 = 7.</p>
 <p style="font-size: 17px;"><strong><i>Or</i></strong></p>
-
-<p style="font-size: 17px;">Define the value of <strong><i>N</i></strong> assuming a value of <strong><i>K =</i></strong> 7, using the equation:</p>
-<p style="font-size: 17px;"><strong><i>N</i></strong> = 7 + 4 - 1 = 10.</p>
+<p style="font-size: 17px;">Define the value of <strong><i>N</i></strong> assuming <strong><i>K = </i></strong>7, using the equation:</p>
+<p style="font-size: 17px;"><strong><i>N</i></strong> = 7+4-1 = 10.</p>
 
 <p style="font-size: 17px;">For the problem with <strong><i>M</i></strong> = 4, <strong><i>N</i></strong> = 10 and <strong><i>K</i></strong> = 7, we have:</p>
 
 <div class="arithmatex">\[
-\large x_1, x_2, \underbrace{x_3}_{\boldsymbol{X_{M-1}}}, \underbrace{\underbrace{\underbrace{x_4}_{\boldsymbol{X_M}}, x_5, x_6, x_7, x_8, x_9, x_{10}}_{\boldsymbol{K = \big|X_M\big| = (X_i \in X_M)}}}_{\textcolor{darkred}{\Large \boldsymbol{g(X_M)}}}
+\large x_1, x_2, \underbrace{x_3}_{\boldsymbol{X_{M-1}}}, \underbrace{\underbrace{\underbrace{x_4}_{\boldsymbol{X_M}}, x_5, x_6, x_7, x_8, x_9, x_{10}}_{\boldsymbol{K = \big|X_M\big| = (X_I \in X_M)}}}_{\textcolor{darkred}{\Large \boldsymbol{g(X_M)}}}
+\]</div>
+<p style="font-size: 17px;">The positions <strong><i>X<sub>M-1</sub></i></strong> and <strong><i>X<sub>M</sub></i></strong> are represented by <strong><i>x<sub>3</sub></i></strong> and <strong><i>x<sub>4</sub></i></strong>, respectively. The vector size <strong><i>| X<sub>M</sub> |</i></strong> is defined by <strong><i>K</i></strong> = 7, starting at <strong><i>x<sub>4</sub></i></strong> and continuing until the last <strong><i>K = 7</i></strong> variables, denoted by <strong><i>x<sub>10</sub></i></strong>.</p>
+
+<p style="font-size: 17px;">The function <span style="color: darkred;"><strong><i>g( X<sub>M</sub> )</i></strong></span> corresponds to the decision variables within the range of <strong><i>| X<sub>M</sub> |</i></strong> (<strong><i>x<sub>4</sub>  x<sub>5</sub>  x<sub>6</sub>  x<sub>7</sub> x<sub>8</sub>  x<sub>9</sub>  x<sub>10</sub></i></strong>), and must be <i>minimized</i> by evolutionary algorithms (<strong><i>MOEAs</i></strong>). When this function reaches <span style="color: darkred;"><strong><i>g = 0</i></strong></span>, the Pareto optimal front of the problem is found.</p>
+
+<hr />
+<h2 id="function-g"><strong>Function g</strong></h2>
+<p style="font-size: 17px;">The purpose of the function <span style="color: darkred;"><strong><i>g( X<sub>M</sub> )</i></strong></span> is to <strong><i>maximize the distance</i></strong> from the POF of the problem, attracting the evolutionary algorithms to local Pareto fronts.</p>
+
+<p style="font-size: 17px;">When the vector <strong><i>| X<sub>M</sub> |</i></strong> reaches the values <strong><i>| 0.5  0.5 .... 0.5 |</i></strong>, the true POF of the problem is obtained.</p>
+
+<div class="arithmatex">\[
+\textcolor{darkred}{\boldsymbol{g(X_M)} = 100 \bigg[\big|X_m\big|+\displaystyle\sum_{X_I \in X_M} (x_i-0.5)^2-\cos(20\pi(x_i-0.5))\bigg]}
+\]</div>
+<hr />
+<h2 id="objective-functions"><strong>Objective functions</strong></h2>
+<p style="font-size: 17px;">Each objective function receives a value from the function <span style="color: darkred;"><strong><i>g( X<sub>M</sub> )</i></strong></span>. The POF of the problem is directly linked to <span style="color: darkred;"><strong><i>g( X<sub>M</sub> )</i></strong></span>.</p>
+
+<div class="arithmatex">\[
+\textcolor{blue}{f_1}(X)=\frac{1}{2}x_1 x_2...x_{M-1}(1+\boldsymbol{\textcolor{darkred}{g(X_M)}}),
+\]</div>
+<div class="arithmatex">\[
+\textcolor{blue}{f_2}(X)=\frac{1}{2}x_1 x_2...(1-x_{m-1})(1+\boldsymbol{\textcolor{darkred}{g(X_M)}}),
+\]</div>
+<div class="arithmatex">\[
+\textcolor{blue}{f_{M-1}}(X)=\frac{1}{2}x_1 (1-x_2)(1+\boldsymbol{\textcolor{darkred}{g(X_M)}}),
+\]</div>
+<div class="arithmatex">\[
+\textcolor{blue}{f_M}(X)=\frac{1}{2}(1-x_1)(1+\boldsymbol{\textcolor{darkred}{g(X_M)}})
 \]</div>
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
