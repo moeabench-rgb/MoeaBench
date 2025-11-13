@@ -16,7 +16,7 @@
     
     
       
-        <title>Amostras não dominadas - MoeaBench</title>
+        <title>Non-dominated Samples - MoeaBench</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#amostras-nao-dominadas" class="md-skip">
+        <a href="#non-dominated-samples" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Amostras não dominadas
+              Non-dominated Samples
             
           </span>
         </div>
@@ -2140,27 +2140,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metodo" class="md-nav__link">
+  <a href="#method" class="md-nav__link">
     <span class="md-ellipsis">
-      Método
+      Method
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracao" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuração
+      Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#amostragem" class="md-nav__link">
+  <a href="#sampling" class="md-nav__link">
     <span class="md-ellipsis">
-      Amostragem
+      Sampling
     </span>
   </a>
   
@@ -2182,21 +2182,21 @@
 
 
 
-<h1 id="amostras-nao-dominadas"><strong>Amostras não dominadas</strong></h1>
-<h2 id="metodo"><strong>Método</strong></h2>
-<p style="font-size: 17px;">O método <strong><i>dtlz8.POFsamples()</i></strong> cria uma matriz <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ]</i></strong> com o mesmo numero de pontos / soluções de <strong><i>[ M ]</i></strong>. Cada ponto da matriz <strong><i>[ M ]</i></strong> é validada de acordo com a solução equivalente de <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ] >= 0</i></strong>. A frente ótima de Pareto gerada é uma restrição aritimética para o problema, e não gera a <strong><i>POF</i></strong> diretamente. Mas fornece o conjunto de restrições necessárias para os algoritimos evolutivos, buscarem todos os conjuntos de soluções possíveis através da evolução de geração, população e mutação.</p>
+<h1 id="non-dominated-samples"><strong>Non-dominated Samples</strong></h1>
+<h2 id="method"><strong>Method</strong></h2>
+<p style="font-size: 17px;">The <strong><i>dtlz8.POFsamples()</i></strong> method creates a matrix <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ]</i></strong> with the same number of points/solutions as <strong><i>[ M ]</i></strong>. Each point of the <strong><i>[ M ]</i></strong> matrix is validated according to the equivalent solution <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ] ≥ 0</i></strong>. The generated Pareto optimal front is an arithmetic constraint for the problem and does not directly produce the <strong><i>POF</i></strong>. But it provides the set of necessary constraints for evolutionary algorithms to search for all possible solution sets through the evolution of generations, population and mutation.</p>
 
-<h2 id="configuracao"><strong>Configuração</strong></h2>
-<p style="font-size: 17px;">O método poasui a seguinte configuração <strong><i>padrão</i></strong>:</p>
+<h2 id="configuration"><strong>Configuration</strong></h2>
+<p style="font-size: 17px;">The method has the following <strong><i>default</i></strong> configuration:</p>
 <ul style="font-size:17px;">
-  <li><strong><i>M</i></strong>( objetivos do problema ) = 3</li>
-  <li><strong><i>N</i></strong>( variáveis de decisão ) = 10</li>
-  <li><strong><i>P</i></strong>( númetos de pontos / soluções do problema ) = 700</li>
+  <li><strong><i>M</i></strong> (problem objectives) = 3</li>
+  <li><strong><i>N</i></strong> (decision variables) = 10</li>
+  <li><strong><i>P</i></strong> (number of points/solutions of the problem) = 700</li>
 </ul>
-<p style="font-size: 17px;">O método aceita qualquer configuração de valores para as variáveis do problema, incluindo qualquer número para <strong><i>M</i></strong>.</p>
+<p style="font-size: 17px;">The method accepts any configuration values for the problem variables, including any number for <strong><i>M</i></strong>.</p>
 
-<h2 id="amostragem"><strong>Amostragem</strong></h2>
-<p style="font-size: 17px;">Os valores das variáveis de decisão, são gerados de forma randômica respeitando o seguinte critério: <strong><i>0 ≤ x<sub>i</sub> ≤ 1</i></strong> para <strong><i>i = 1,2 ... N</i></strong>.</p>
+<h2 id="sampling"><strong>Sampling</strong></h2>
+<p style="font-size: 17px;">The values of the decision variables are generated randomly following the criterion: <strong><i>0 ≤ x<sub>i</sub> ≤ 1</i></strong> for <strong><i>i = 1,2 ... N</i></strong>.</p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
