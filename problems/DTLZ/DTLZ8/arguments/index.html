@@ -16,7 +16,7 @@
     
     
       
-        <title>Non-dominated Samples - MoeaBench</title>
+        <title>Arguments - MoeaBench</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#non-dominated-samples" class="md-skip">
+        <a href="#arguments" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Non-dominated Samples
+              Arguments
             
           </span>
         </div>
@@ -2140,20 +2140,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#method" class="md-nav__link">
+  <a href="#m" class="md-nav__link">
     <span class="md-ellipsis">
-      Method
+      M
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sampling" class="md-nav__link">
+  <a href="#n" class="md-nav__link">
     <span class="md-ellipsis">
-      Sampling
+      N
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="N">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      P
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2173,12 +2221,26 @@
 
 
 
-<h1 id="non-dominated-samples"><strong>Non-dominated Samples</strong></h1>
-<h2 id="method"><strong>Method</strong></h2>
-<p style="font-size: 17px;">The <strong><i>dtlz8.POFsamples()</i></strong> method creates a matrix <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ]</i></strong> with the same number of points/solutions as <strong><i>[ M ]</i></strong>. Each point of the <strong><i>[ M ]</i></strong> matrix is validated according to the equivalent solution <strong><i>[ g<sub>j</sub>(x) , g<sub>M</sub>(x) ] ≥ 0</i></strong>. The generated Pareto optimal front is an arithmetic constraint for the problem and does not directly produce the <strong><i>POF</i></strong>. But it provides the set of necessary constraints for evolutionary algorithms to search for all possible solution sets through the evolution of generations, population and mutation.</p>
+<h1 id="arguments"><strong>Arguments</strong></h1>
+<h2 id="m">M</h2>
+<p style="font-size: 17px;">The variable M represents the objectives of the problem. The Pareto optimal front is found when one objective can no longer be improved by worsening any other objective.
+.</p>
 
-<h2 id="sampling"><strong>Sampling</strong></h2>
-<p style="font-size: 17px;">The values of the decision variables are generated randomly following the criterion: <strong><i>0 ≤ x<sub>i</sub> ≤ 1</i></strong> for <strong><i>i = 1,2 ... N</i></strong>.</p>
+<h2 id="n">N</h2>
+<p style="font-size: 17px;">The variable N represents the number of decision variables.
+.</p>
+
+<h3 id="default">default</h3>
+<p style="font-size: 17px;">If not passed as a parameter, the assumed value is <span style="color: darkred;"><strong>10</strong></span>.</p>
+
+<h2 id="p">P</h2>
+<p style="font-size: 17px;">The variable P represents a sample of the Pareto optimal front, configured in the benchmark problem</p>
+
+<h3 id="note">note</h3>
+<p style="font-size: 17px;">This sample does not represent the set of solutions of the evolutionary algorithm, but only a simulation of the Pareto front.</p>
+
+<h3 id="default_1">default</h3>
+<p style="font-size: 17px;">If not passed as a parameter, the assumed value is <span style="color: darkred;"><strong>700</strong></span>.</p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
