@@ -2140,46 +2140,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definicao" class="md-nav__link">
+  <a href="#layers" class="md-nav__link">
     <span class="md-ellipsis">
-      Definição
+      Layers
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#camadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Camadas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Camadas">
+    <nav class="md-nav" aria-label="Layers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#camada-1" class="md-nav__link">
+  <a href="#layer-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Camada 1
+      Layer 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#camada-2" class="md-nav__link">
+  <a href="#layer-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Camada 2
+      Layer 2
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#camada-3" class="md-nav__link">
+  <a href="#layer-3" class="md-nav__link">
     <span class="md-ellipsis">
-      Camada 3
+      Layer 3
     </span>
   </a>
   
@@ -2191,9 +2182,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo
+      Example
     </span>
   </a>
   
@@ -2216,27 +2207,26 @@
 
 
 <h1 id="dtlz8"><strong>DTLZ8</strong></h1>
-<h2 id="definicao"><strong>Definição</strong></h2>
-<p style="font-size: 17px;">O problema DTLZ8 possui uma frente ótima de Pareto formada por uma linha reta, e por um hyperplano linear.</p>
-<p style="font-size: 17px;">DTLZ8 é definida pelas seguintes variáveis:</p>
+<p style="font-size: 17px;">The DTLZ8 problem has a Pareto optimal front formed by a straight line and a linear hyperplane.</p>
+<p style="font-size: 17px;">DTLZ8 is defined by the following variables:</p>
 <ul style="font-size:17px;">
-  <li><strong><i>M</i></strong>: Número de objetivos do problema</li>
-  <li><strong><i>N</i></strong>: Número de variáveis de decisão, representado por: 10<strong><i>M</i></strong></li>
+  <li><strong><i>M</i></strong>: Number of objectives of the problem</li>
+  <li><strong><i>N</i></strong>: Number of decision variables, represented by: 10<strong><i>M</i></strong></li>
 </ul>
 
-<h2 id="camadas"><strong>Camadas</strong></h2>
+<h2 id="layers"><strong>Layers</strong></h2>
 <div class="arithmatex">\[
 \large\underbrace{\underbrace{\underbrace{\boldsymbol{x_1} , \boldsymbol{x_2} , \boldsymbol{x_3}}_{\boldsymbol{\textcolor{blue}{f_1}(X)} } , \underbrace{\boldsymbol{x_4} , \boldsymbol{x_5} , \boldsymbol{x_6}}_{\boldsymbol{\textcolor{blue}{f_{M-1}}(X)} }}_{\boldsymbol{\textcolor{darkred}{g_j}(X)}}, \underbrace{\underbrace{\boldsymbol{x_7} , \boldsymbol{x_8} ,\boldsymbol{x_9}}_{\boldsymbol{\textcolor{blue}{f_{M}}(X)} }}_{\boldsymbol{\textcolor{darkred}{g_M}(X)}}}_{\Large\boldsymbol{\big[ \boldsymbol{\textcolor{darkred}{g_j}(X):\boldsymbol{\textcolor{darkred}{g_M}(X)}} \big]\geq 0}}
 \]</div>
-<p style="font-size: 17px;">O problema pode ser divido em <strong><i>3</i></strong> camadas:</p>
+<p style="font-size: 17px;">The problem can be divided into <strong><i>3</i></strong> layers:</p>
 <ul style="font-size:17px;">
-  <li>A camada 1 define as funções objetivo</li>
-  <li>A camada 2 define a restrição <span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> responsável pela formação da linha reta que compõe a POF <span style="color: blue;"><strong><i>f<sub>1</sub></i></strong></span> = <span style="color: blue;"><strong><i>f<sub>2</sub></i></strong></span> = ... <span style="color: blue;"><strong><i>f<sub>M-1</sub></i></strong></span>  e a restrição <span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span> que define o hyperplano Linear.</li>
-  <li>A camada 3, é o conjunto das restrições, que deve possuir o mesmo número de elementos de <strong><i>M</i></strong> representado por:</li> 
+  <li>Layer 1 defines the objective functions</li>
+  <li>Layer 2 defines the constraint <span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> responsible for forming the straight line that composes the POF <span style="color: blue;"><strong><i>f<sub>1</sub></i></strong></span> = <span style="color: blue;"><strong><i>f<sub>2</sub></i></strong></span> = ... <span style="color: blue;"><strong><i>f<sub>M-1</sub></i></strong></span>  and the constraint <span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span> that defines the Linear Hyperplane.</li>
+  <li>Layer 3 is the set of constraints, which must have the same number of elements as <strong><i>M</i></strong> represented by:</li> 
 </ul>
 
-<h3 id="camada-1"><strong>Camada 1</strong></h3>
-<p style="font-size: 17px;">Definição das funções objetivo:</p>
+<h3 id="layer-1"><strong>Layer 1</strong></h3>
+<p style="font-size: 17px;">Definition of the objective functions:</p>
 <div class="arithmatex">\[
 \large\underbrace{\boldsymbol{x_1} , \boldsymbol{x_2} , \boldsymbol{x_3}}_{\boldsymbol{\textcolor{blue}{f_1}(X)} } , \underbrace{\boldsymbol{x_4} , \boldsymbol{x_5} , \boldsymbol{x_6}}_{\boldsymbol{\textcolor{blue}{f_{M-1}}(X)} }, \underbrace{\boldsymbol{x_7} , \boldsymbol{x_8} ,\boldsymbol{x_9}}_{\boldsymbol{\textcolor{blue}{f_{M}}(X)} }
 \]</div>
@@ -2246,8 +2236,8 @@
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{blue}{f_{j}}(X)}=   \large   \frac{1}{\big[\frac{n}{M}\big]}  \sum\nolimits_{\big[(\text{ j - 1 })\frac{n}{M}\big]}^{\big[j\frac{n}{M}\big]} \boldsymbol{x_i},
 \]</div>
-<h3 id="camada-2"><strong>Camada 2</strong></h3>
-<p style="font-size: 17px;">Definição das Restrições:</p>
+<h3 id="layer-2"><strong>Layer 2</strong></h3>
+<p style="font-size: 17px;">Definition of the constraints:</p>
 <div class="arithmatex">\[
 \underbrace{\boldsymbol{\textcolor{blue}{f_{1}}(X)} \boldsymbol{\text{ ... }} \boldsymbol{\textcolor{blue}{f_{M-1}}(X)}}_{\Large\boldsymbol{\textcolor{darkred}{g_j}(X)} }, \underbrace{\boldsymbol{\textcolor{blue}{f_{M}}(X)}}_{\Large\boldsymbol{\textcolor{darkred}{g_M}(X)}}
 \]</div>
@@ -2263,17 +2253,17 @@
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{darkred}{g_{M}}(X)} = 2 \boldsymbol{\textcolor{blue}{f_M}(X)} + {\large \min\limits_{\substack{\scriptstyle i,j=1\\ \scriptstyle i\#j}}^{ M-1 }} \text{ } \big[\boldsymbol{\textcolor{blue}{f_i}(X)}+\boldsymbol{\textcolor{blue}{f_j}(X)}\big] \geq 0
 \]</div>
-<h3 id="camada-3"><strong>Camada 3</strong></h3>
-<p style="font-size: 17px;">Junção do conjunto de restrições:</p>
+<h3 id="layer-3"><strong>Layer 3</strong></h3>
+<p style="font-size: 17px;">Combination of the constraint set:</p>
 <ul style="font-size:17px;">
-  <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> e <span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span></li>
+  <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> and <span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span></li>
 </ul>
 
 <div class="arithmatex">\[
 \underbrace{\boldsymbol{\textcolor{darkred}{g_j}(X)\big[\boldsymbol{\textcolor{blue}{f_{1}}(X)} \boldsymbol{\text{ ... }} \boldsymbol{\textcolor{blue}{f_{M-1}}(X)}\big] \text{ , } } \boldsymbol{\textcolor{darkred}{g_M}(X)\big[\boldsymbol{\textcolor{blue}{f_{M}}(X)}\big]}}_{\Large\boldsymbol{ \big[ \boldsymbol{\textcolor{darkred}{g_j}(X):\boldsymbol{\textcolor{darkred}{g_M}(X)}} \big]\geq 0}}
 \]</div>
-<h2 id="exemplo"><strong>Exemplo</strong></h2>
-<p style="font-size: 17px;">Problema definido com:</p>
+<h2 id="example"><strong>Example</strong></h2>
+<p style="font-size: 17px;">Problem defined with:</p>
 <ul style="font-size:17px;">
   <li><strong><i>M = 4</i></strong> </li>
   <li><strong><i>N = 3M = 12</i></strong> </li>
@@ -2297,7 +2287,7 @@
 <ul style="font-size:17px;">
   <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span></li>
 </ul>
-<p style="font-size: 17px;">Compreende o intervalo: <span style="color: blue;"><strong><i>f<sub>1</sub>  f<sub>2</sub>  f<sub>(3)M-1</sub></i></strong></span></p>
+<p style="font-size: 17px;">Covers the range: <span style="color: blue;"><strong><i>f<sub>1</sub>  f<sub>2</sub>  f<sub>(3)M-1</sub></i></strong></span></p>
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{darkred}{g_{1}}(X)} = \boldsymbol{\textcolor{blue}{f_{(4)}M}(X)} + 4\boldsymbol{\textcolor{blue}{f_1}(X)} - 1 \geq 0
 \]</div>
@@ -2313,20 +2303,20 @@
 <div class="arithmatex">\[
 {\large \min\limits_{\substack{\scriptstyle i,j=1\\ \scriptstyle i\#j}}^{ M-1 }} \text{ } \big[\boldsymbol{\textcolor{blue}{f_i}(X)}+\boldsymbol{\textcolor{blue}{f_j}(X)}\big] 
 \]</div>
-<p style="font-size: 17px;">Calcula a menor soma entre as combinações dos objetivos <span style="color: blue;"><strong><i> f<sub>1  </sub>f<sub>2  </sub>f<sub>(3)M-1</sub></i></strong></span>, desde que não sejam pares de objetivos iguais: <span style="color: blue;"><strong><i>[ ( f<sub>1</sub> + f<sub>2</sub> ), ( f<sub>1</sub> + f<sub>3</sub> ) , ( f<sub>2</sub> + f<sub>3</sub> ) ] </i></strong></span></p>
+<p style="font-size: 17px;">Calculates the smallest sum among the combinations of objectives <span style="color: blue;"><strong><i> f<sub>1  </sub>f<sub>2  </sub>f<sub>(3)M-1</sub></i></strong></span>, as long as they are not identical objective pairs: <span style="color: blue;"><strong><i>[ ( f<sub>1</sub> + f<sub>2</sub> ), ( f<sub>1</sub> + f<sub>3</sub> ) , ( f<sub>2</sub> + f<sub>3</sub> ) ] </i></strong></span></p>
 <p>. </p>
-<p style="font-size: 17px;">Supondo que a menor soma é <span style="color: blue;"><strong><i>( f<sub>2</sub> + f<sub>3</sub> )</strong></span></p>
+<p style="font-size: 17px;">Assuming the smallest sum is <span style="color: blue;"><strong><i>( f<sub>2</sub> + f<sub>3</sub> )</strong></span></p>
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{darkred}{g_{(4)M}}(X)} = 2 \boldsymbol{\textcolor{blue}{f_{(4)M}}(X)} + \text{ } (\boldsymbol{\textcolor{blue}{f_2}(X)}+\boldsymbol{\textcolor{blue}{f_3}(X)}) \geq 0
 \]</div>
 <ul style="font-size:17px;">
-  <li><span style="color: darkred;"><strong><i>Restrições</strong></span>:<span style="color: darkred;"></li>
+  <li><span style="color: darkred;"><strong><i>Constraints</strong></span>:<span style="color: darkred;"></li>
 </ul>
 
 <div class="arithmatex">\[
 \boldsymbol{\underbrace{\underbrace{\textcolor{blue}{f_1}(x)}_{\Large\textcolor{darkred}{g_1}(x)} \text{  }\underbrace{\textcolor{blue}{f_2}(x)}_{\Large\textcolor{darkred}{g_2}(x)}\text{  } \underbrace{\textcolor{blue}{f_{3}}(x)}_{\Large\textcolor{darkred}{g_{3}}(x)}}_{\Large\textcolor{darkred}{g_j}} \text{  } \underbrace{\underbrace{\textcolor{blue}{f_{4}}(x)}_{\Large\textcolor{darkred}{g_{4}}(x)}}_{\Large\textcolor{darkred}{g_M}}}
 \]</div>
-<p style="font-size: 17px;">O número de funções objetivo <span style="color: blue;"><strong><i>M = 4</i></strong></span> é o mesmo número de restrições <span style="color: darkred;"><strong><i>g = 4</i></strong></span>. Para as 4 funções objetivo serem válidas, a condição <span style="color: darkred;"><strong><i>g<sub>j</sub> (x) : g<sub>M</sub> (x) ≥ 0</i></strong></span> deve ser satisfeita</p>
+<p style="font-size: 17px;">The number of objective functions <span style="color: blue;"><strong><i>M = 4</i></strong></span> is the same as the number of constraints <span style="color: darkred;"><strong><i>g = 4</i></strong></span>. For the 4 objective functions to be valid, the condition <span style="color: darkred;"><strong><i>g<sub>j</sub> (x) : g<sub>M</sub> (x) ≥ 0</i></strong></span> must be satisfied.</p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
