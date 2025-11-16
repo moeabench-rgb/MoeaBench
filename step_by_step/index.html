@@ -2684,12 +2684,12 @@
 <h2 id="import-moeabench">import MoeaBench</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench</span><span class="w"> </span><span class="kn">import</span> <span class="n">moeabench</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">Note: With the exception of the module for implementing benchmark problems and evolutionary algorithms, only this MoeaBench import is necessary.</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> With the exception of the module for implementing benchmark problems and evolutionary algorithms, only this MoeaBench import is necessary.</p>
 
 <h2 id="start-an-experiment">start an experiment</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">Note: The user can create as many experiments as they want.</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> The user can create as many experiments as they want.</p>
 
 <h2 id="benchmarks">Benchmarks</h2>
 <h3 id="variable">variable</h3>
@@ -2725,7 +2725,7 @@
 <h5 id="example-arguments">example - arguments</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">800</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">Note: The list of required arguments can be found in the description of each benchmark problem via the following link:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> The list of required arguments can be found in the description of each benchmark problem via the following link:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/problems/DTLZ/DTLZ1#arguments"><span style="color: darkblue;"><strong>arguments</strong></span></a></p>
 
@@ -2763,7 +2763,7 @@
 <h5 id="example-arguments_1">example - arguments</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span> <span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">Notes:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span></p>
 
 <ul style="font-size: 17px;">
 
@@ -2772,7 +2772,7 @@ The `problem` argument is also required in default mode.</li>
 
 <li>
 
-Note: The list of required arguments can be found in the description of each evolutionary algorithm via the following link:
+<span style="color: darkred;"><strong>Note: </strong></span> The list of required arguments can be found in the description of each evolutionary algorithm via the following link:
 <ul>
 <li><a href = "https://moeabench-rgb.github.io/MoeaBench/algorithms/NSGA3/#arguments"><span style="color: darkblue;"><strong>arguments</strong></span></a></li>
 
@@ -2786,7 +2786,7 @@ Note: The list of required arguments can be found in the description of each evo
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;">Note: After the run() method is executed, the variables experiment.problem and experiment.moea will be available for use in the MoeaBench data analysis tools.</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> After the run() method is executed, the variables <span style="color: darkred;"><strong>experiment.problem</strong></span> and <span style="color: darkred;"><strong>experiment.moea</strong></span> will be available for use in the MoeaBench data analysis tools.</p>
 
 <div style = "text-align: right; margin-top: 2em;">
 <button onclick="window.history.back()" style ="font-size:22px;">←</button>
