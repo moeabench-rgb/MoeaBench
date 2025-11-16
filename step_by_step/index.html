@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#step-by-step" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -297,6 +302,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    step by step
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -309,6 +329,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-moeabench" class="md-nav__link">
+    <span class="md-ellipsis">
+      import MoeaBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-an-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      start an experiment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-list-of-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get a list of benchmarks.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2095,6 +2170,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-moeabench" class="md-nav__link">
+    <span class="md-ellipsis">
+      import MoeaBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-an-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      start an experiment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-list-of-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get a list of benchmarks.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2110,9 +2231,49 @@
 
 
 
-  <h1>step by step</h1>
+<h1 id="step-by-step"><strong>step by step</strong></h1>
+<h2 id="dependencies">dependencies</h2>
+<h2 id="import-moeabench">import MoeaBench</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench</span><span class="w"> </span><span class="kn">import</span> <span class="n">moeabench</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="start-an-experiment">start an experiment</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span> <span class="o">=</span> <span class="n">moeabench</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="get-a-list-of-benchmarks">Get a list of benchmarks.</h2>
+<p><a href="../moeabench.benchmark.pdf">text</a></p>
+<h1 id="experimentmoea">experiment.moea</h1>
+<p style="font-size: 17px;">The MOEAD algorithm is an evolutionary algorithm used by MoeaBench for performance testing with framework benchmark problems or user-implemented problems. All libraries and operators are owned by the multi-objective optimization <strong><i>pymoo</strong></i>. For more information about link here:</p>
 
+<p style="font-size: 17px;"><a href = "https://doi.org/10.1109/ACCESS.2020.2990567"><span style="color: darkblue;"><strong>official pymoo documentation</strong></span></a></p>
 
+<p style="font-size: 17px;"><a href = "https://pymoo.org/algorithms/moo/moead.html"><span style="color: darkblue;"><strong>MOEA/D by pymoo</strong></span></a></p>
+
+<h2 id="example">example</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">MOEAD</span><span class="p">(</span><span class="n">problem</span><span class="o">=</span><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="method-return">method return</h2>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.moea </strong></span> receives mandatory methods from the evolutionary algorithm. Receive more information at this link:</p>
+
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_moea/example_code/example_code/#variable-experimentmoea"><span style="color: darkblue;"><strong>variable experiment.moea</strong></span></a></p>
+
+<h3 id="experimentresult">experiment.result</h3>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.result </strong></span>  receives the return value from the variable <strong>experiment.moea</strong>.Receive more information at this link:</p>
+
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentresult"><span style="color: darkblue;"><strong>variable experiment.result</strong></span></a></p>
+
+<h2 id="arguments">arguments</h2>
+<p style="font-size: 17px;">To learn about the arguments passed to the evolutionary algorithm, click on the link:</p>
+
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/algorithms/arguments/"><span style="color: darkblue;"><strong>arguments</strong></span></a></p>
+
+<h2 id="configuration">configuration</h2>
+<p style="font-size: 17px;">To learn about the configuration used by moeabench for the evolutionary algorithm, click on the link:</p>
+
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/algorithms/configuration/"><span style="color: darkblue;"><strong>configuration</strong></span></a></p>
+
+<div style = "text-align: right; margin-top: 2em;">
+<button onclick="window.history.back()" style ="font-size:22px;">←</button>
+</div>
 
 
 
