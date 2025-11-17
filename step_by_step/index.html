@@ -2716,17 +2716,17 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> 
 </span></code></pre></div></td></tr></table></div>
 <h4 id="method-return">method return</h4>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.problem </strong></span> receives mandatory methods from the benchmark problem. Receive more information at this link:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.problem </strong></span> receives mandatory methods from the benchmark problem. For more details, see:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_benchmark/example_code/example_code/#variable-experimentproblem"> <span style="color: darkblue;"><strong>variable experiment.problem</strong></span></a></p>
 
 <h5 id="experimentpof">experiment.pof</h5>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.pof </strong></span>  receives the return value from the variable <strong>experiment.problem</strong>.Receive more information at this link:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.pof </strong></span>  receives the return value from the variable <strong>experiment.problem</strong>.For more details, see:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentpof"><span style="color: darkblue;"><strong>variable experiment.pof and associated analysis tools</strong></span></a></p>
 
 <h3 id="accessing">accessing</h3>
-<p style="font-size: 17px;">when you hover your <strong><i>mouse over:</i></strong></p>
+<p style="font-size: 17px;">Accessing moeabench.benchmark with the <strong><i>mouse over:</i></strong> in a Google Colab environment.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2754,7 +2754,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> 
 </span></code></pre></div></td></tr></table></div>
 <h4 id="method-return_1">method return</h4>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.moea </strong></span> receives mandatory methods from the evolutionary algorithm. Receive more information at this link:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.moea </strong></span> receives mandatory methods from the evolutionary algorithm. For more details, see:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_moea/example_code/example_code/#variable-experimentmoea"><span style="color: darkblue;"><strong>variable experiment.moea</strong></span></a></p>
 
@@ -2764,7 +2764,7 @@
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentresult"><span style="color: darkblue;"><strong>variable experiment.result and associated analysis tools</strong></span></a></p>
 
 <h3 id="accessing_1">accessing</h3>
-<p style="font-size: 17px;">when you hover your <strong><i>mouse over:</i></strong></p>
+<p style="font-size: 17px;">Accessing moeabench.MOEA with the <strong><i>mouse over:</i></strong> in a Google Colab environment.</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2776,10 +2776,10 @@
 <p style="font-size: 17px;">After choosing the <strong>MOEA</strong>, the expression is defined as follows:</p>
 
 <h5 id="example-default_1">example - default</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h5 id="example-arguments_1">example - arguments</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span> <span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span> <span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span></p>
 
