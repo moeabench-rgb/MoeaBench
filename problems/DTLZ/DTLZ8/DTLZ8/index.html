@@ -2094,6 +2094,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gj
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#layers" class="md-nav__link">
     <span class="md-ellipsis">
       Layers
@@ -2134,6 +2181,16 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
@@ -2161,14 +2218,30 @@
 
 
 <h1 id="dtlz8"><strong>DTLZ8</strong></h1>
-<p style="font-size: 17px;">The DTLZ8 problem has a Pareto optimal front formed by a straight line and a linear hyperplane.</p>
-<p style="font-size: 17px;">DTLZ8 is defined by the following variables:</p>
-<ul style="font-size:17px;">
-  <li><strong><i>M</i></strong>: Number of objectives of the problem</li>
-  <li><strong><i>N</i></strong>: Number of decision variables, represented by: 10<strong><i>M</i></strong></li>
-</ul>
+<h2 id="feature">feature</h2>
+<h3 id="constraints">constraints</h3>
+<p style="font-size: 17px;">Constraints define a feasible search space. The algorithms must be able to find non-dominated solutions of the Pareto optimal front in this space.</p>
 
-<h2 id="layers"><strong>Layers</strong></h2>
+<h3 id="gj">Gj</h3>
+<p style="font-size: 17px;">Define a straight line</p>
+
+<ul style="font-size:17px;">
+  <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> </li>
+</ul>
+<div class="arithmatex">\[
+\boldsymbol{\textcolor{darkred}{g_{j}}(X)} = \boldsymbol{\textcolor{blue}{f_M}(X)} + 4\boldsymbol{\textcolor{blue}{f_j}(X)} - 1 \geq 0
+\]</div>
+<h3 id="gm">Gm</h3>
+<p style="font-size: 17px;">define a  linear hyperplane</p>
+
+<ul style="font-size:17px;">
+  <li><span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span> </li>
+</ul>
+<div class="arithmatex">\[
+\boldsymbol{\textcolor{darkred}{g_{M}}(X)} = 2 \boldsymbol{\textcolor{blue}{f_M}(X)} + {\large \min\limits_{\substack{\scriptstyle i,j=1\\ \scriptstyle i\#j}}^{ M-1 }} \text{ } \big[\boldsymbol{\textcolor{blue}{f_i}(X)}+\boldsymbol{\textcolor{blue}{f_j}(X)}\big] \geq 0
+\]</div>
+<h3 id="implementation">implementation</h3>
+<h4 id="layers"><strong>Layers</strong></h4>
 <div class="arithmatex">\[
 \large\underbrace{\underbrace{\underbrace{\boldsymbol{x_1} , \boldsymbol{x_2} , \boldsymbol{x_3}}_{\boldsymbol{\textcolor{blue}{f_1}(X)} } , \underbrace{\boldsymbol{x_4} , \boldsymbol{x_5} , \boldsymbol{x_6}}_{\boldsymbol{\textcolor{blue}{f_{M-1}}(X)} }}_{\boldsymbol{\textcolor{darkred}{g_j}(X)}}, \underbrace{\underbrace{\boldsymbol{x_7} , \boldsymbol{x_8} ,\boldsymbol{x_9}}_{\boldsymbol{\textcolor{blue}{f_{M}}(X)} }}_{\boldsymbol{\textcolor{darkred}{g_M}(X)}}}_{\Large\boldsymbol{\big[ \boldsymbol{\textcolor{darkred}{g_j}(X):\boldsymbol{\textcolor{darkred}{g_M}(X)}} \big]\geq 0}}
 \]</div>
@@ -2179,7 +2252,7 @@
   <li>Layer 3 is the set of constraints, which must have the same number of elements as <strong><i>M</i></strong> represented by:</li> 
 </ul>
 
-<h3 id="layer-1"><strong>Layer 1</strong></h3>
+<h5 id="layer-1"><strong>Layer 1</strong></h5>
 <p style="font-size: 17px;">Definition of the objective functions:</p>
 <div class="arithmatex">\[
 \large\underbrace{\boldsymbol{x_1} , \boldsymbol{x_2} , \boldsymbol{x_3}}_{\boldsymbol{\textcolor{blue}{f_1}(X)} } , \underbrace{\boldsymbol{x_4} , \boldsymbol{x_5} , \boldsymbol{x_6}}_{\boldsymbol{\textcolor{blue}{f_{M-1}}(X)} }, \underbrace{\boldsymbol{x_7} , \boldsymbol{x_8} ,\boldsymbol{x_9}}_{\boldsymbol{\textcolor{blue}{f_{M}}(X)} }
@@ -2190,24 +2263,12 @@
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{blue}{f_{j}}(X)}=   \large   \frac{1}{\big[\frac{n}{M}\big]}  \sum\nolimits_{\big[(\text{ j - 1 })\frac{n}{M}\big]}^{\big[j\frac{n}{M}\big]} \boldsymbol{x_i},
 \]</div>
-<h3 id="layer-2"><strong>Layer 2</strong></h3>
+<h5 id="layer-2"><strong>Layer 2</strong></h5>
 <p style="font-size: 17px;">Definition of the constraints:</p>
 <div class="arithmatex">\[
 \underbrace{\boldsymbol{\textcolor{blue}{f_{1}}(X)} \boldsymbol{\text{ ... }} \boldsymbol{\textcolor{blue}{f_{M-1}}(X)}}_{\Large\boldsymbol{\textcolor{darkred}{g_j}(X)} }, \underbrace{\boldsymbol{\textcolor{blue}{f_{M}}(X)}}_{\Large\boldsymbol{\textcolor{darkred}{g_M}(X)}}
 \]</div>
-<ul style="font-size:17px;">
-  <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> </li>
-</ul>
-<div class="arithmatex">\[
-\boldsymbol{\textcolor{darkred}{g_{j}}(X)} = \boldsymbol{\textcolor{blue}{f_M}(X)} + 4\boldsymbol{\textcolor{blue}{f_j}(X)} - 1 \geq 0
-\]</div>
-<ul style="font-size:17px;">
-  <li><span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span> </li>
-</ul>
-<div class="arithmatex">\[
-\boldsymbol{\textcolor{darkred}{g_{M}}(X)} = 2 \boldsymbol{\textcolor{blue}{f_M}(X)} + {\large \min\limits_{\substack{\scriptstyle i,j=1\\ \scriptstyle i\#j}}^{ M-1 }} \text{ } \big[\boldsymbol{\textcolor{blue}{f_i}(X)}+\boldsymbol{\textcolor{blue}{f_j}(X)}\big] \geq 0
-\]</div>
-<h3 id="layer-3"><strong>Layer 3</strong></h3>
+<h5 id="layer-3"><strong>Layer 3</strong></h5>
 <p style="font-size: 17px;">Combination of the constraint set:</p>
 <ul style="font-size:17px;">
   <li><span style="color: darkred;"><strong><i>g<sub>j</sub> (X)</i></strong></span> and <span style="color: darkred;"><strong><i>g<sub>M</sub> (X)</i></strong></span></li>
