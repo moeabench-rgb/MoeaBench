@@ -2713,15 +2713,15 @@
 <h3 id="variable">variable</h3>
 <p style="font-size: 17px;">The expression should always begin with:</p>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span> <span class="o">=</span> 
 </span></code></pre></div></td></tr></table></div>
 <h4 id="method-return">method return</h4>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.problem </strong></span> receives mandatory methods from the benchmark problem. For more details, see:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.benchmark</strong></span> receives mandatory methods from the benchmark problem. For more details, see:</p>
 
-<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_benchmark/example_code/example_code/#variable-experimentproblem"> <span style="color: darkblue;"><strong>variable experiment.problem</strong></span></a></p>
+<p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/implement_benchmark/example_code/example_code/#variable-experimentproblem"> <span style="color: darkblue;"><strong>variable experiment.benchmark/strong></span></a></p>
 
 <h5 id="experimentpof">experiment.pof</h5>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.pof </strong></span>  receives the return value from the variable <strong>experiment.problem</strong>.For more details, see:</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>experiment.pof </strong></span>  receives the return value from the variable <strong>experiment.benchmark/strong>.For more details, see:</p>
 
 <p style="font-size: 17px;"><a href = "https://moeabench-rgb.github.io/MoeaBench/experiments/save_experiment/save_experiment/#variable-experimentpof"><span style="color: darkblue;"><strong>variable experiment.pof and associated analysis tools</strong></span></a></p>
 
@@ -2738,10 +2738,10 @@
 <p style="font-size: 17px;">After choosing the benchmark problem, the expression is defined as follows:</p>
 
 <h5 id="example-default">example - default</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h5 id="example-arguments">example - arguments</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">problem</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">800</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">benchmark</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">DTLZ1</span><span class="p">(</span><span class="n">M</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">800</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> The list of required arguments can be found in the description of each benchmark problem via the following link:</p>
 
@@ -2776,17 +2776,17 @@
 <p style="font-size: 17px;">After choosing the <strong>MOEA</strong>, the expression is defined as follows:</p>
 
 <h5 id="example-default_1">example - default</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h5 id="example-arguments_1">example - arguments</h5>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">problem</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">problem</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span> <span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">moea</span> <span class="o">=</span> <span class="n">moeabench</span><span class="o">.</span><span class="n">MOEA</span><span class="o">.</span><span class="n">NSGA_III</span><span class="p">(</span><span class="n">population</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">generations</span> <span class="o">=</span> <span class="mi">400</span> <span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span></p>
 
 <ul style="font-size: 17px;">
 
 <li>
-The <span style="color: darkred;"><strong>problem = experiment.problem</strong></span> argument is also required in default mode.</li>
+The <span style="color: darkred;"><strong>problem = experiment.benchmark</strong></span> argument is also required in default mode.</li>
 
 <li>
 
@@ -2804,7 +2804,7 @@ The <span style="color: darkred;"><strong>problem = experiment.problem</strong><
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="n">experiment</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> After the run() method is executed, the variables <span style="color: darkred;"><strong>experiment.problem</strong></span> and <span style="color: darkred;"><strong>experiment.moea</strong></span> will be available for use in the MoeaBench data analysis tools.</p>
+<p style="font-size: 17px;"><span style="color: darkred;"><strong>Note: </strong></span> After the run() method is executed, the variables <span style="color: darkred;"><strong>experiment.benchmark</strong></span> and <span style="color: darkred;"><strong>experiment.moea</strong></span> will be available for use in the MoeaBench data analysis tools.</p>
 
 <h2 id="next-steps">next steps</h2>
 <p style="font-size: 17px;">Data analysis tools mentioned in the links:</p>
