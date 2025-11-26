@@ -2265,18 +2265,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcao-g" class="md-nav__link">
+  <a href="#g-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Funçao g
+      g function
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcoes-objetivo" class="md-nav__link">
+  <a href="#objective-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Funções objetivo
+      Objective functions
     </span>
   </a>
   
@@ -2391,7 +2391,7 @@
 \]</div>
 <p style="font-size: 17px;">Above, in the <strong><i>m − d</i></strong> partition, there is a segment <span style="color: darkred;"><strong><i>(&beta;<sub>2</sub>)</i></strong></span> that is redundant within the problem, totaling <strong><i>3 objectives</i></strong>. In the <strong><i>d</i></strong> partition, the essential objectives are located in the <strong><i>d − 1</i></strong> segment. In this segment, there is also a redundant objective <strong><i>&beta;<sub>2</sub></i></strong>, due to the condition <strong><i>d > 4</i></strong>. In the <strong><i>m − 1</i></strong> partition, which encompasses the <strong><i>m − d</i></strong> and <strong><i>d</i></strong> partitions, the segments <span style="color: blue;"><strong><i>(&beta;<sub>1</sub>, &beta;<sub>2</sub>, &beta;<sub>m − d + 1</sub>, &gamma;<sub>2</sub>, &gamma;<sub>d − 1</sub>)</i></strong></span> are mutually conflicting, totaling <strong><i>5 objectives</i></strong>.</p>
 
-<h2 id="funcao-g"><strong>Funçao g</strong></h2>
+<h2 id="g-function"><strong>g function</strong></h2>
 <div class="arithmatex">\[
 { \underbrace{x1}_{\large \boldsymbol{m-2}} , \underbrace{x2}_{\underbrace{ \large \boldsymbol{m-1}}_{ \Large \boldsymbol{d-2}}  } , \underbrace{x3}_{\underbrace{ \large \boldsymbol{M}}_{ \Large \boldsymbol{d-1}}} ,  \underbrace{\underbrace{ \underbrace{x4}_{\underbrace{\underbrace{\large \boldsymbol{m+1}}_{\Large \boldsymbol{d}} }_{{ \Large \boldsymbol{X_m}}}} , x5  ,x6  , x7 , x8  ,x9 , x10 , x11 , x12 , \underbrace{x13}_{\large \boldsymbol{X_n}}}_{\large \boldsymbol{X^{\huge r}}}}_{\textcolor{darkred}{\Large \boldsymbol{g(X^{\huge r})}}}}
 \]</div>
@@ -2403,8 +2403,8 @@
 <div class="arithmatex">\[
 \boldsymbol{\textcolor{darkred}{g(X^{\large r}) = (x_m-x_i)^2 + \boldsymbol{\displaystyle\sum^{\boldsymbol{n}}_{\boldsymbol{i = m + 1}}} \boldsymbol{(x_i-0.5)^2}}};
 \]</div>
-<h2 id="funcoes-objetivo"><strong>Funções objetivo</strong></h2>
-<p style="font-size: 17px;">Algumas das variáveis de decisão das função objetivo são separáveis e outras dependentes. Cada função objetivo recebe um valor da função <span style="color: darkred;"><strong><i>g( X<sup>r</sup> )</i></strong></span>. A POF do problema esta ligada a minimização de <span style="color: darkred;"><strong><i>g( X<sub>r</sub> )</i></strong></span>, e na busca por objetivos que sejam essenciais ap problema.</p>
+<h2 id="objective-functions"><strong>Objective functions</strong></h2>
+<p style="font-size: 17px;">Some of the decision variables of the objective functions are separable, while others are dependent. Each objective function receives a value from the function <span style="color: darkred;"><strong><i>g(X<sup>r</sup>)</i></strong></span>. The POF of the problem is tied to the minimization of <span style="color: darkred;"><strong><i>g(X<sup>r</sup>)</i></strong></span>, as well as to the search for objectives that are essential to the problem.</p>
 
 <div class="arithmatex">\[
  \beta_1(X) = \cos(\theta_1). . . \cos(\theta_{m-2})\cos(\theta_{m-1})(1+\boldsymbol{\textcolor{darkred}{g(X^{\large r})}});
