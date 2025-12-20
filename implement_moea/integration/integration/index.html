@@ -1210,6 +1210,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#moeabench-inheriting-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - inheriting the class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#user-receiving-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       👤User - receiving arguments
@@ -2243,6 +2252,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#moeabench-inheriting-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench - inheriting the class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#user-receiving-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       👤User - receiving arguments
@@ -2322,13 +2340,11 @@
 <p style="font-size: 17px;"><strong>MoeaBench</strong> It allows the user to integrate their evolutionary algorithm implementation and use it as a native MOEA, following the steps:</p>
 
 <h3 id="moeabench-importing-the-class">🧩MoeaBench - importing the class</h3>
-<p>```python linenums="4" hl_lines
-from MoeaBench.integration_moea import integration_moea
-<div class="highlight"><pre><span></span><code>### 🧩MoeaBench - inheriting the class
-
-```python linenums=&quot;4&quot; hl_lines=&quot;1&quot;
-class my_NSGA2deap(integration_moea):
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">MoeaBench.integration_moea</span><span class="w"> </span><span class="kn">import</span> <span class="n">integration_moea</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="moeabench-inheriting-the-class">🧩MoeaBench - inheriting the class</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="k">class</span><span class="w"> </span><span class="nc">my_NSGA2deap</span><span class="p">(</span><span class="n">integration_moea</span><span class="p">):</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="user-receiving-arguments">👤User - receiving arguments</h3>
 <p style="font-size: 17px;">The user can define a constructor for their class, which will receive the essential data that MoeBench will use: <span style="color: darkred;"><strong><i>population</i></strong></span>, <span style="color: darkred;"><strong><i>generation</i></strong></span>, and <span style="color: darkred;"><strong><i>seed/i></strong></span>.</p>
 
