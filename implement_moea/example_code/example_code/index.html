@@ -2463,6 +2463,26 @@
 <p style="font-size: 17px;">stores the population in the objective space for each generation</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">F_gen_all</span><span class="o">=</span><span class="p">[]</span> 
 </span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">stores the population in the decision-variable space for each generation</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">X_gen_all</span><span class="o">=</span><span class="p">[]</span> 
+</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">stores the non-dominated solutions in the objective space for each generation</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">hist_F_non_dominate</span><span class="o">=</span><span class="p">[]</span> 
+</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">stores the non-dominated solutions in the decision-variable space for each generation</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">hist_X_non_dominate</span><span class="o">=</span><span class="p">[]</span> 
+</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">stores the dominated solutions in the objective space for each generation</p>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">hist_F_dominate</span><span class="o">=</span><span class="p">[]</span>  
+</span></code></pre></div></td></tr></table></div>
+<p style="font-size: 17px;">stores the dominated solutions in the decision-variable space for each</p>
+<p>generation</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">hist_X_dominate</span><span class="o">=</span><span class="p">[]</span> 
+</span></code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2509,18 +2529,8 @@
 <span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">X_gen_all</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#stores the population in the decision-variable space for each generation</span>
-</span>    <span class="n">hist_F_non_dominate</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#stores the non-dominated solutions in the objective space for each generation</span>
-    <span class="n">hist_X_non_dominate</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#stores the non-dominated solutions in the decision-variable space for each generation</span>
-    <span class="n">hist_F_dominate</span><span class="o">=</span><span class="p">[]</span>  <span class="c1">#stores the dominated solutions in the objective space for each generation</span>
-    <span class="n">hist_X_dominate</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#stores the dominated solutions in the decision-variable space for each generation</span>
-    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">fit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">,</span> <span class="n">fitnesses</span><span class="p">):</span>
-      <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">fit</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">fit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">,</span> <span class="n">fitnesses</span><span class="p">):</span>
+</span>      <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">fit</span>
     <span class="n">F_gen_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">pop</span> <span class="p">])]))</span>
     <span class="n">X_gen_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">pop</span> <span class="p">])]))</span>
     <span class="n">pop</span> <span class="o">=</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">))</span>
