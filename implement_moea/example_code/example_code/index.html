@@ -1258,7 +1258,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#moeabench_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#user_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      👤User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user_4" class="md-nav__link">
     <span class="md-ellipsis">
       👤User
     </span>
@@ -2335,7 +2353,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#moeabench_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩MoeaBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#user_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      👤User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user_4" class="md-nav__link">
     <span class="md-ellipsis">
       👤User
     </span>
@@ -2422,20 +2458,7 @@
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">())</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_M</span><span class="p">())</span>
 </span>    <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">typecode</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">FitnessMin</span><span class="p">)</span>   
     <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;attr_float&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniform</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_N</span><span class="p">())</span>
     <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">Individual</span><span class="p">,</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">attr_float</span><span class="p">)</span>
@@ -2454,11 +2477,26 @@
       <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">up</span><span class="p">)]</span>
     <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
       <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">low</span><span class="p">]</span><span class="o">*</span><span class="n">size</span><span class="p">,[</span><span class="n">up</span><span class="p">]</span><span class="o">*</span><span class="n">size</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="moeabench_4">🧩MoeaBench</h3>
+<p style="font-size: 17px;">The evaluation_benchmark method receives the population of each generation in the decision variable space. These variables undergo a penalty process within the benchmark problem. Only the solutions that did not suffer a penalty are returned.</p>
 
-
-  <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
-    <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">result_evaluate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_benchmark</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">result_evaluate</span><span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+</span>    <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">result_evaluate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_benchmark</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="user_2">👤User</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="k">return</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">result_evaluate</span><span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</span>
 
 
   <span class="k">def</span><span class="w"> </span><span class="nf">feasible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
@@ -2468,17 +2506,17 @@
        <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="moeabench_4">🧩MoeaBench</h3>
+<h3 id="moeabench_5">🧩MoeaBench</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">  <span class="k">def</span><span class="w"> </span><span class="nf">evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="user_2">👤User</h3>
+<h3 id="user_3">👤User</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">pop</span> <span class="o">=</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">population</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_population</span><span class="p">())</span>
 </span>    <span class="n">invalid_ind</span> <span class="o">=</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">pop</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">valid</span><span class="p">]</span>
     <span class="n">fitnesses</span> <span class="o">=</span> <span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">NSGA2deap</span><span class="o">.</span><span class="n">toolbox</span><span class="o">.</span><span class="n">evaluate</span><span class="p">,</span> <span class="n">invalid_ind</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="user_3">👤User</h3>
+<h3 id="user_4">👤User</h3>
 <p style="font-size: 17px;">stores the population in the objective space for each generation</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll">    <span class="n">F_gen_all</span><span class="o">=</span><span class="p">[]</span> 
 </span></code></pre></div></td></tr></table></div>
